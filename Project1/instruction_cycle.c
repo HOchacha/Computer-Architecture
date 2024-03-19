@@ -79,6 +79,10 @@ void executeInstruction(){
         gr.r0 = *sr.sourceReg * *sr.targetReg;
     }
     else if (strcmp(sr.operatorReg, "/")==0){
+        if (sr.targetReg == 0) {
+            sr.trapFlag = 1;
+            return;
+        }
         gr.r0 = *sr.sourceReg / *sr.targetReg;
     }
     else if (strcmp(sr.operatorReg, "M")==0){

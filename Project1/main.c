@@ -57,6 +57,10 @@ int main(int argc, char* args[]) {
         executeInstruction();
 
         printAllRegisterData();
+        if (sr.trapFlag == 1) {
+            printf("FATAL ERROR :: Trap triggered \n");
+            break;
+        }
         if (sr.haltFlag == 1) {
             printf("Terminate Calculator");
             break;
