@@ -20,7 +20,7 @@ typedef struct generalRegisters {
     uint32_t r9;
 }genReg;
 
-typedef struct specificRegisters{
+typedef struct specialRegisters{
     uint32_t programCounter;
     char * instructionReg;
     uint32_t bufferReg;
