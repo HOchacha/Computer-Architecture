@@ -1,7 +1,8 @@
 # Computer Architecture
 - Project 1 : Simple Calculator with Instruction in C language
 # How to run the program?
-- First of all, you can find the .sh files on this repository. These scripts are used for automatically installing and compiling my projects.
+- To copy this repository, use command ```git clone https://github.com/HOchacha/Computer-Architecture```
+- After cloning this repo, you may find the .sh files on this repository. These scripts are used for automatically installing and compiling my projects.
 - To execute the scripts, you need to give permission on the script.
 
 ```chmod +x [script_file_name.sh]```
@@ -14,7 +15,12 @@
 - you might find the compiled output binary files in ```~/Computer-Architecture/bin``` directory.
 # Environment Setting
 - this repository is made with Cmake build Framework. So you may have to install cmake program in your linux environmet.
-- My Enviornment Setting is Ubuntu 22.04 Container/Virtual Machine and Windows 11 Visual Studio 2022 Community ver.
+- My Enviornment Setting
+  - remote environment :
+    - Linux Ubuntu 22.04 Container/Virtual Machine
+  - Local environment :
+    - OS: Windows 11
+    - IDE: Visual Studio 2022 Community ver.
 - To install cmake package in your Linux Env., execute shell script
 ```apt-get install cmake```
 or run the script 
