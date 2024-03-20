@@ -1,5 +1,5 @@
 #!/bin/bash
-
+cd ..
 # Check if the bin directory exists under Project1
 if [ ! -d "bin" ]; then
   # If not, create the bin directory
