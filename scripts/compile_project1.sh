@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "Start compiling"
 cd ..
 # Check if the bin directory exists under Project1
 if [ ! -d "bin" ]; then
