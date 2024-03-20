@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "checking cmake package installed"
 # Check if cmake is installed
 if ! command -v cmake &> /dev/null
 then
