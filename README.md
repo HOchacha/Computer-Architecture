@@ -3,9 +3,13 @@
 # How to run the program?
 - First of all, you can find the .sh files on this repository. These scripts are used for automatically installing and compiling my projects.
 - To execute the scripts, you need to give permission on the script.
+
     chmod +x [script_file_name.sh]
+
 - after this instruction, you can execute the shell script by specifying the script file name.
+
     ./[script_file_name.sh]
+
 - some scripts need some arguments, so just follow the instruction and specify it.
 - you might find the binary files in ~/bin directory.
 # Environment Setting
