@@ -1,5 +1,8 @@
 # Computer Architecture
 - Project 1 : Simple Calculator with Instruction in C language
+- Project 2 : ?
+- Project 3 : ?
+- Project 4 : ?
 # How to run the program?
 - To copy this repository, use command ```git clone https://github.com/HOchacha/Computer-Architecture```
 - After cloning this repo, you may find the .sh files on this repository. These scripts are used for automatically installing and compiling my projects.
