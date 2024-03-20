@@ -16,9 +16,8 @@
 - this repository is made Cmake package managment program. So you may have to install cmake program in your linux environmet.
 - My Enviornment Setting is Ubuntu 22.04 Container/Virtual Machine and Windows 11 Visual Studio 2022 Community ver.
 - To install cmake package in your Linux Env., execute shell script
-'''apt-get install cmake'''
-
+```apt-get install cmake```
 or run the script 
-'''./install_cmake.sh'''
+```./install_cmake.sh```
 # Code Blame & Issue
 - I'm opened for being blame on my work. Feel free to open Issue and blame it. 
