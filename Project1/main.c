@@ -3,9 +3,12 @@
 #include <stdlib.h>
 #include "register.h"
 #include "instruction_cycle.h"
+
+
 speReg sr = {0,};
 genReg gr = {0,};
-operators op = { "+", "-", "*", "/", "M", "B", "H" };
+const operators op = { "+", "-", "*", "/", "M", "B", "H" };
+
 void printAllRegisterData();
 void printALLSpecificData();
 int main(int argc, char* args[]) {
