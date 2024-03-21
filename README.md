@@ -17,9 +17,11 @@
 - My Enviornment Setting
   - remote environment :
     - Linux Ubuntu 22.04 Container/Virtual Machine
+    - cmake 3.22.1
   - Local environment :
     - OS: Windows 11
-    - IDE: Visual Studio 2022 Community ver.
+    - IDE: Visual Studio 2022 Community ver., CLion 2023.2.l
+    - cmake 3.26.x
 - To install cmake package in your Linux Env., execute shell script
 ```apt-get install cmake``` or run the script ```./install_cmake.sh```
 # Code Blame & Issue
