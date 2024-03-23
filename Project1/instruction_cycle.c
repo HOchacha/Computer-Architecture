@@ -95,6 +95,7 @@ void executeInstruction(){
     }
     else if (strcmp(sr.operatorReg, "B")==0){
         //this code block seem weird
+        printf("TRIGGER :: LOG :: Branch Triggered\n");
         sr.programCounter = *sr.sourceReg;
     }
     else if (strcmp(sr.operatorReg, "C")==0){

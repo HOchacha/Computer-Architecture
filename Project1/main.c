@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "register.h"
 #include "instruction_cycle.h"
-
+//#define LOG
 
 speReg sr = {0,};
 genReg gr = {0,};
@@ -47,16 +47,22 @@ int main(int argc, char* args[]) {
     sr.programCounter = 0;
     while (1) {
         //gr, sr의 경우 extern을 이용하여 전역변수 공유할 수 있음
-        printf("LOG :: Fetch Instruction\n");
-        fetchInstruction(instructionTable);
+        printf("LOG :: Fetch Instruction from %dth instruction\n", sr.programCounter);
 
+        fetchInstruction(instructionTable);
+#ifdef LOG
         printf("LOG :: Decode Instuction\n");
+#endif
         decodeInstruction();
 
+#ifdef LOG
         printf("LOG :: Fetch Register Data\n");
+#endif
         fetchDataFromRegister();
 
+#ifdef LOG
         printf("LOG :: Execute Register Data\n");
+#endif
         executeInstruction();
 
         printAllRegisterData();
@@ -65,7 +71,7 @@ int main(int argc, char* args[]) {
             break;
         }
         if (sr.haltFlag == 1) {
-            printf("Terminate Calculator");
+            printf("TERMINATION :: Terminate Calculator\n");
             break;
         }
         printf("LOG :: Single Cycle Finished ::::::::::::::::::::\n\n\n");
@@ -74,7 +80,7 @@ int main(int argc, char* args[]) {
         free(instructionTable[i]);
         instructionTable[i] = NULL;
     }
-    printf("LOG :: Calculator Ended\n");
+    printf("TERMINATION :: Calculator Ended\n");
     return 0;
 }
 
