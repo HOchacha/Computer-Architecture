@@ -31,14 +31,14 @@ void decodeInstruction(){
     if (0 == temp){
         // convert the string value to unsigned integer value
         char* temp = removePrefix(token, "0x");
-        uint32_t value = strtoul(temp, NULL, 10);
+        uint32_t value = strtoul(temp, NULL, 16);
 
         setImmediateValueInRegister(value , &sr.sourceImmediateReg);
         sr.sourceReg = &sr.sourceImmediateReg;
     }
     else if((temp = strncmp(token, "R",1)) == 0) {
         char* temp = removePrefix(token, "R");
-        uint32_t value = strtoul(temp, NULL, 10);
+        uint32_t value = strtoul(temp, NULL, 16);
 
         sr.sourceReg = getRegisterFromInteger(value);
     }
@@ -69,26 +69,26 @@ void decodeInstruction(){
     instructionBuffer = NULL;
 }
 
-void fetchDataFromRegister(){
-    //there is no data-fetch steps in the cycle
-}
+
 
 void executeInstruction(){
+    setResultBuffer();
     if(strcmp(sr.operatorReg, "+")==0){
-        gr.r0 = *sr.sourceReg + *sr.targetReg;
+        sr.resultImmediateReg = *sr.sourceReg + *sr.targetReg;
     }
     else if (strcmp(sr.operatorReg, "-")==0){
-        gr.r0 = *sr.sourceReg - *sr.targetReg;
+        sr.resultImmediateReg = *sr.sourceReg - *sr.targetReg;
     }
     else if (strcmp(sr.operatorReg, "*")==0){
-        gr.r0 = *sr.sourceReg * *sr.targetReg;
+        sr.resultImmediateReg = *sr.sourceReg * *sr.targetReg;
     }
     else if (strcmp(sr.operatorReg, "/")==0){
         if (*sr.targetReg == 0) {
             sr.trapFlag = 1;
             return;
         }
-        gr.r0 = *sr.sourceReg / *sr.targetReg;
+        // 나눗셈 연산의 경우, 몫만을 가져오도록 구현함.
+        sr.resultImmediateReg = *sr.sourceReg / *sr.targetReg;
     }
     else if (strcmp(sr.operatorReg, "M")==0){
         *sr.sourceReg = *sr.targetReg;
@@ -96,14 +96,14 @@ void executeInstruction(){
     else if (strcmp(sr.operatorReg, "B")==0){
         //this code block seem weird
         printf("TRIGGER :: LOG :: Branch Triggered\n");
-        sr.programCounter = *sr.sourceReg;
+        sr.resultImmediateReg = *sr.sourceReg;
     }
     else if (strcmp(sr.operatorReg, "C")==0){
         if (*sr.sourceReg == *sr.targetReg){
-            gr.r0 = 1;
+            sr.resultImmediateReg = 1;
         }
         else {
-            gr.r0 = 0;
+            sr.resultImmediateReg = 0;
         }
     }
     else if (strcmp(sr.operatorReg, "H")==0){
@@ -114,6 +114,23 @@ void executeInstruction(){
         sr.trapFlag = 1;
         return;
     }
+}
+
+void writeBackInstruction(){
+    setResultBuffer();
+    if (strcmp(sr.operatorReg, "B")==0){
+        sr.programCounter = *sr.resultReg;
+
+    }
+    else{
+        //C, +-*/,
+        gr.r0 = *sr.resultReg;
+    }
+
+}
+
+void setResultBuffer() {
+    sr.resultReg= &sr.resultImmediateReg;
 }
 
 void setImmediateValueInRegister(uint32_t value, uint32_t* immediateRegister) {
