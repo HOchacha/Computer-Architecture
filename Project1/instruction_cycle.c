@@ -43,6 +43,11 @@ void decodeInstruction(){
         sr.sourceReg = getRegisterFromInteger(value);
     }
 
+    // TODO: remove duplicated variable in code block
+    // TODO: make exceptional case when the branch instruction is decoded with only one operand.
+    // TODO: just dismiss the third field of the instruction to work properly.
+    //       Maybe make it NULL.
+
     // set target register
     token = strtok(NULL, " ");
     temp = strncmp(token, "0x", 2);
@@ -89,7 +94,16 @@ void executeInstruction(){
         *sr.sourceReg = *sr.targetReg;
     }
     else if (strcmp(sr.operatorReg, "B")==0){
-
+        //this code block seem weird
+        sr.programCounter = *sr.sourceReg;
+    }
+    else if (strcmp(sr.operatorReg, "C")==0){
+        if (*sr.sourceReg == *sr.targetReg){
+            gr.r0 = 1;
+        }
+        else {
+            gr.r0 = 0;
+        }
     }
     else if (strcmp(sr.operatorReg, "H")==0){
         sr.haltFlag = 1;
@@ -130,7 +144,7 @@ uint32_t* getRegisterFromInteger(uint32_t index){
             return NULL;
     }
 }
-char *removePrefix(const char* str, const char* prefix) {
+char* removePrefix(const char* str, const char* prefix) {
     size_t lenStr = strlen(str);
     size_t lenPrefix = strlen(prefix);
 
