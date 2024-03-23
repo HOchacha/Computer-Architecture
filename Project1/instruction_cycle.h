@@ -9,14 +9,15 @@
 
 #ifndef COMPUTER_ARCHITECTURE_INSTRUCTION_CYCLE_H
 #define COMPUTER_ARCHITECTURE_INSTRUCTION_CYCLE_H
-void fetchInstruction(char ** instructionTable);
+void fetchInstruction(char** instructionTable);
 void decodeInstruction();
 void fetchDataFromRegister();
 void executeInstruction();
 
 void setImmediateValueInRegister(uint32_t value, uint32_t* immediateRegister);
-char *removePrefix(const char* str, const char* prefix);
+char* removePrefix(const char* str, const char* prefix);
 uint32_t* getRegisterFromInteger(uint32_t index);
 void setOperatorReg(char** operator_reg, char* token);
 void writeBackInstruction();
+void setResultTarget();
 #endif //COMPUTER_ARCHITECTURE_INSTRUCTION_CYCLE_H

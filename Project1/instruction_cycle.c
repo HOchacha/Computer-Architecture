@@ -10,37 +10,34 @@ extern speReg sr;
 extern operators op;
 
 
-void setResultBuffer();
 
-void fetchInstruction(char ** instructionTable){
+void fetchInstruction(char** instructionTable) {
     sr.instructionReg = instructionTable[sr.programCounter++];
 }
 
-// instruction buffer and token is the heap memory.
-// watch out for using them.
-void decodeInstruction(){
-    char* instructionBuffer = calloc(strlen(sr.instructionReg),40);
+void decodeInstruction() {
+    char* instructionBuffer = calloc(strlen(sr.instructionReg), 40);
     // copy the instruction from register
     strcpy(instructionBuffer, sr.instructionReg);
     printf("LOG :: instruction : %s\n", instructionBuffer);
     // set operator Register
-    char * token = strtok(instructionBuffer, " ");
+    char* token = strtok(instructionBuffer, " ");
     setOperatorReg(&sr.operatorReg, token);
 
     // set source register
     token = strtok(NULL, " ");
     int temp = strncmp(token, "0x", 2);
-    if (0 == temp){
+    if (0 == temp) {
         // convert the string value to unsigned integer value
         char* temp = removePrefix(token, "0x");
         uint32_t value = strtoul(temp, NULL, 16);
 
-        setImmediateValueInRegister(value , &sr.sourceImmediateReg);
+        setImmediateValueInRegister(value, &sr.sourceImmediateReg);
         sr.sourceReg = &sr.sourceImmediateReg;
     }
-    else if((temp = strncmp(token, "R",1)) == 0) {
+    else if ((temp = strncmp(token, "R", 1)) == 0) {
         char* temp = removePrefix(token, "R");
-        uint32_t value = strtoul(temp, NULL, 16);
+        uint32_t value = strtoul(temp, NULL, 10);
 
         sr.sourceReg = getRegisterFromInteger(value);
     }
@@ -54,17 +51,17 @@ void decodeInstruction(){
     token = strtok(NULL, " ");
     temp = strncmp(token, "0x", 2);
     if (0 == temp) {
-        char* temp = removePrefix(token, "0x");
-        uint32_t value = strtoul(temp, NULL, 10);
+        char* tempString = removePrefix(token, "0x");
+        uint32_t value = strtoul(tempString, NULL, 16);
 
         setImmediateValueInRegister(value, &sr.targetImmediateReg);
-        sr.targetReg = &sr.targetImmediateReg; 
+        sr.targetReg = &sr.targetImmediateReg;
     }
-    else if((temp = strncmp(token, "R",1)) == 0){
-        char* temp = removePrefix(token, "R");
-        uint32_t value = strtoul(temp, NULL, 10);
+    else if ((temp = strncmp(token, "R", 1)) == 0) {
+        char* tempString = removePrefix(token, "R");
+        uint32_t value = strtoul(tempString, NULL, 10);
 
-        sr.targetReg = (uint32_t *) getRegisterFromInteger(value);
+        sr.targetReg = (uint32_t*)getRegisterFromInteger(value);
     }
 
     free(instructionBuffer);
@@ -73,18 +70,17 @@ void decodeInstruction(){
 
 
 
-void executeInstruction(){
-    setResultBuffer();
-    if(strcmp(sr.operatorReg, "+")==0){
+void executeInstruction() {
+    if (strcmp(sr.operatorReg, "+") == 0) {
         sr.resultImmediateReg = *sr.sourceReg + *sr.targetReg;
     }
-    else if (strcmp(sr.operatorReg, "-")==0){
+    else if (strcmp(sr.operatorReg, "-") == 0) {
         sr.resultImmediateReg = *sr.sourceReg - *sr.targetReg;
     }
-    else if (strcmp(sr.operatorReg, "*")==0){
+    else if (strcmp(sr.operatorReg, "*") == 0) {
         sr.resultImmediateReg = *sr.sourceReg * *sr.targetReg;
     }
-    else if (strcmp(sr.operatorReg, "/")==0){
+    else if (strcmp(sr.operatorReg, "/") == 0) {
         if (*sr.targetReg == 0) {
             sr.trapFlag = 1;
             return;
@@ -92,23 +88,23 @@ void executeInstruction(){
         // 나눗셈 연산의 경우, 몫만을 가져오도록 구현함.
         sr.resultImmediateReg = *sr.sourceReg / *sr.targetReg;
     }
-    else if (strcmp(sr.operatorReg, "M")==0){
+    else if (strcmp(sr.operatorReg, "M") == 0) {
         *sr.sourceReg = *sr.targetReg;
     }
-    else if (strcmp(sr.operatorReg, "B")==0){
+    else if (strcmp(sr.operatorReg, "B") == 0) {
         //this code block seem weird
         printf("TRIGGER :: LOG :: Branch Triggered\n");
         sr.resultImmediateReg = *sr.sourceReg;
     }
-    else if (strcmp(sr.operatorReg, "C")==0){
-        if (*sr.sourceReg == *sr.targetReg){
+    else if (strcmp(sr.operatorReg, "C") == 0) {
+        if (*sr.sourceReg == *sr.targetReg) {
             sr.resultImmediateReg = 1;
         }
         else {
             sr.resultImmediateReg = 0;
         }
     }
-    else if (strcmp(sr.operatorReg, "H")==0){
+    else if (strcmp(sr.operatorReg, "H") == 0) {
         sr.haltFlag = 1;
     }
     else {
@@ -118,28 +114,27 @@ void executeInstruction(){
     }
 }
 
-void writeBackInstruction(){
-    setResultBuffer();
-    if (strcmp(sr.operatorReg, "B")==0){
-        sr.programCounter = *sr.resultReg;
-
+void writeBackInstruction() {
+    setResultTarget();
+    if (strcmp(sr.operatorReg, "B") == 0) {
+        sr.programCounter = sr.resultImmediateReg;
     }
-    else{
+    else {
         //C, +-*/,
-        gr.r0 = *sr.resultReg;
+        printf("LOG:: REG 0: %d, RES : %d\n", gr.r0, sr.resultImmediateReg);
+        *sr.resultReg = sr.resultImmediateReg;
     }
-
 }
 
-void setResultBuffer() {
-    sr.resultReg= &sr.resultImmediateReg;
+void setResultTarget() {
+    sr.resultReg = &gr.r0;
 }
 
 void setImmediateValueInRegister(uint32_t value, uint32_t* immediateRegister) {
     *immediateRegister = value;
 }
-uint32_t* getRegisterFromInteger(uint32_t index){
-    switch (index){
+uint32_t* getRegisterFromInteger(uint32_t index) {
+    switch (index) {
         case 0:
             return &(gr.r0);
         case 1:
@@ -181,7 +176,8 @@ char* removePrefix(const char* str, const char* prefix) {
         strcpy(newStr, str + lenPrefix);
 
         return newStr;
-    } else {
+    }
+    else {
         char* newStr = (char*)malloc(lenStr + 1);
         if (newStr == NULL) {
             printf("Memory allocation failed\n");
@@ -217,6 +213,10 @@ void setOperatorReg(char** operator_reg, char* token)
     else if (strcmp(token, op.move) == 0)
     {
         *operator_reg = op.move;
+    }
+    else if (strcmp(token, op.compare) == 0)
+    {
+        *operator_reg = op.compare;
     }
     else if (strcmp(token, op.halt) == 0)
     {

@@ -20,10 +20,10 @@ typedef struct generalRegisters {
     uint32_t r9;
 }genReg;
 
-typedef struct specialRegisters{
+typedef struct specialRegisters {
     uint32_t programCounter;
-    char * instructionReg;
-    char * operatorReg;
+    char* instructionReg;
+    char* operatorReg;
     uint32_t sourceImmediateReg;
     uint32_t targetImmediateReg;
     uint32_t resultImmediateReg;
@@ -42,6 +42,7 @@ typedef struct _operators
     char* div;
     char* move;
     char* branch;
+    char* compare;
     char* halt;
 }operators;
 

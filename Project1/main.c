@@ -1,3 +1,4 @@
+#pragma warning(disable:4996)
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -5,9 +6,9 @@
 #include "instruction_cycle.h"
 //#define LOG
 
-speReg sr = {0,};
-genReg gr = {0,};
-const operators op = { "+", "-", "*", "/", "M", "B", "H" };
+speReg sr = { 0, };
+genReg gr = { 0, };
+const operators op = { "+", "-", "*", "/", "M", "B","C","H" };
 
 void printAllRegisterData();
 void printALLSpecificData();
@@ -17,7 +18,7 @@ int main(int argc, char* args[]) {
         return -1;
     }
 
-    FILE *fp = fopen(args[1], "r");
+    FILE* fp = fopen(args[1], "r");
     if (fp == NULL) {
         printf("Fatal Error : Fail to open input text files");
         return -1;
@@ -26,12 +27,12 @@ int main(int argc, char* args[]) {
 
 
     // read all instructions for implement stored instruction machine
-    char **instructionTable = calloc(100, sizeof(char *));
+    char** instructionTable = calloc(100, sizeof(char*));
 
     int instructionMaxAddress = 0;
     while (fgets(buffer, 100, fp) != NULL) {
         buffer[strcspn(buffer, "\n")] = '\0';
-        instructionTable[instructionMaxAddress] = (char *) malloc(strlen(buffer) + 1);
+        instructionTable[instructionMaxAddress] = (char*)malloc(strlen(buffer) + 1);
         if (instructionTable[instructionMaxAddress] == NULL) {
             printf("the instruction is already exist, check your source code please.\n");
             return -1;
@@ -64,6 +65,7 @@ int main(int argc, char* args[]) {
         printf("LOG :: Write back result value to REG 0 \n");
 #endif
         writeBackInstruction();
+
         printAllRegisterData();
         if (sr.trapFlag == 1) {
             printf("Fatal Error :: Trap triggered \n");
@@ -83,8 +85,8 @@ int main(int argc, char* args[]) {
     return 0;
 }
 
-void printAllRegisterData(){
-    for(int i = 0; i < 10; i++){
-        printf("REG %d : %d\n", i,*getRegisterFromInteger(i));
+void printAllRegisterData() {
+    for (int i = 0; i < 10; i++) {
+        printf("REG %d : %d\n", i, *getRegisterFromInteger(i));
     }
 }
