@@ -17,8 +17,6 @@ void executeInstruction();
 void setImmediateValueInRegister(uint32_t value, uint32_t* immediateRegister);
 char *removePrefix(const char* str, const char* prefix);
 uint32_t* getRegisterFromInteger(uint32_t index);
-void setImmediateValueInRegister(uint32_t value, uint32_t* immediateRegister);
-char *removePrefix(const char* str, const char* prefix);
 void setOperatorReg(char** operator_reg, char* token);
-uint32_t* getRegisterFromInteger(uint32_t index);
+void writeBackInstruction();
 #endif //COMPUTER_ARCHITECTURE_INSTRUCTION_CYCLE_H

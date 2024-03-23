@@ -19,7 +19,7 @@ int main(int argc, char* args[]) {
 
     FILE *fp = fopen(args[1], "r");
     if (fp == NULL) {
-        printf("Fail to open input text files");
+        printf("Fatal Error : Fail to open input text files");
         return -1;
     }
     char buffer[100];
@@ -56,18 +56,17 @@ int main(int argc, char* args[]) {
         decodeInstruction();
 
 #ifdef LOG
-        printf("LOG :: Fetch Register Data\n");
-#endif
-        fetchDataFromRegister();
-
-#ifdef LOG
         printf("LOG :: Execute Register Data\n");
 #endif
         executeInstruction();
 
+#ifdef LOG
+        printf("LOG :: Write back result value to REG 0 \n");
+#endif
+        writeBackInstruction();
         printAllRegisterData();
         if (sr.trapFlag == 1) {
-            printf("FATAL ERROR :: Trap triggered \n");
+            printf("Fatal Error :: Trap triggered \n");
             break;
         }
         if (sr.haltFlag == 1) {

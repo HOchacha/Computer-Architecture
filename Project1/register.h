@@ -23,12 +23,13 @@ typedef struct generalRegisters {
 typedef struct specialRegisters{
     uint32_t programCounter;
     char * instructionReg;
-    uint32_t bufferReg;
     char * operatorReg;
     uint32_t sourceImmediateReg;
     uint32_t targetImmediateReg;
+    uint32_t resultImmediateReg;
     uint32_t* sourceReg;
     uint32_t* targetReg;
+    uint32_t* resultReg;
     int haltFlag;
     int trapFlag;
 }speReg;

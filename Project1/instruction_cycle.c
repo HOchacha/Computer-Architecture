@@ -10,6 +10,8 @@ extern speReg sr;
 extern operators op;
 
 
+void setResultBuffer();
+
 void fetchInstruction(char ** instructionTable){
     sr.instructionReg = instructionTable[sr.programCounter++];
 }
