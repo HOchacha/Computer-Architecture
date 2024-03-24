@@ -1,0 +1,13 @@
+solid@solid-24560-7bf9f46fcc-bpncr:~/Computer-Architecture/Project1$ ./Project1 ./input.txt
+LOG : Instruction Loaded, initiate calculation
+instruction :       + 0x3 0x2: sourceReg = [    3]: targetReg = [    2]: resultImm = [    5]: REG 0 = [    5]
+instruction :       - 0x1 0x2: sourceReg = [    1]: targetReg = [    2]: resultImm = [   -1]: REG 0 = [   -1]
+instruction :        M R2 0x3: sourceReg = [    0]: targetReg = [    3]: resultImm = [   -1]: REG 0 = [   -1]
+instruction :         + R0 R2: sourceReg = [   -1]: targetReg = [    3]: resultImm = [    2]: REG 0 = [    2]
+instruction :         C R0 R1: sourceReg = [    2]: targetReg = [    0]: resultImm = [    0]: REG 0 = [    0]
+instruction :    GCD 0xf 0x60: sourceReg = [   15]: targetReg = [   96]: resultImm = [    3]: REG 0 = [    3]
+instruction :       B 0x8 0x0: sourceReg = [    8]: targetReg = [    0]: resultImm = [    8]: REG 0 = [    3]
+instruction :     BEQ 0xf 0x9: sourceReg = [   15]: targetReg = [    9]: resultImm = [    8]: REG 0 = [    8]
+instruction :       H 0x0 0x0: sourceReg = [    0]: targetReg = [    0]: resultImm = [    8]: REG 0 = [    8]
+TERMINATION :: Terminate Calculator
+TERMINATION :: Calculator Ended
