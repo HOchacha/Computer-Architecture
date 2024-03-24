@@ -4,7 +4,9 @@
 #include <stdlib.h>
 #include "register.h"
 #include "instruction_cycle.h"
-#define LOG
+//#define LOG
+//#define PRINT_ALL_REGISTER
+#define TOTAL_LOG
 
 speReg sr = { 0, };
 genReg gr = { 0, };
@@ -40,7 +42,9 @@ int main(int argc, char* args[]) {
         strcpy(instructionTable[instructionMaxAddress], buffer);
         instructionMaxAddress++;
     }
-
+#ifdef TOTAL_LOG
+    printf("LOG : Instruction Loaded, initiate calculation\n");
+#endif
     fclose(fp);
     fp = NULL;
 
@@ -48,8 +52,9 @@ int main(int argc, char* args[]) {
     sr.programCounter = 0;
     while (1) {
         //gr, sr의 경우 extern을 이용하여 전역변수 공유할 수 있음
+#ifdef LOG
         printf("LOG :: Fetch Instruction from %dth instruction\n", sr.programCounter);
-
+#endif
         fetchInstruction(instructionTable);
 #ifdef LOG
         printf("LOG :: Decode Instuction\n");
@@ -65,23 +70,29 @@ int main(int argc, char* args[]) {
         printf("LOG :: Write back result value to REG 0 \n");
 #endif
         writeBackInstruction();
-
+#ifdef PRINT_ALL_REGISTER
         printAllRegisterData();
+#endif
         if (sr.trapFlag == 1) {
             printf("Fatal Error :: Trap triggered \n");
             break;
         }
         if (sr.haltFlag == 1) {
-            printf("TERMINATION :: Terminate Calculator\n");
+            printf("\nTERMINATION :: Terminate Calculator\n");
             break;
         }
+#ifdef LOG
         printf("LOG :: Single Cycle Finished ::::::::::::::::::::\n\n\n");
+#endif
+#ifdef TOTAL_LOG
+        printf("\n");
+#endif
     }
     for (int i = 0; i < instructionMaxAddress; i++) {
         free(instructionTable[i]);
         instructionTable[i] = NULL;
     }
-    printf("TERMINATION :: Calculator Ended\n");
+    printf("\nTERMINATION :: Calculator Ended\n");
     return 0;
 }
 

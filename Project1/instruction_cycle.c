@@ -4,7 +4,9 @@
 #include <string.h>
 #include <stdlib.h>
 #include "instruction_cycle.h"
-
+#ifndef TOTAL_LOG
+#define TOTAL_LOG
+#endif
 extern genReg gr;
 extern speReg sr;
 extern operators op;
@@ -17,7 +19,9 @@ void decodeInstruction() {
     char* instructionBuffer = calloc(strlen(sr.instructionReg), 40);
     // copy the instruction from register
     strcpy(instructionBuffer, sr.instructionReg);
-    printf("LOG :: instruction : %s\n", instructionBuffer);
+#ifdef TOTAL_LOG
+    printf("instruction : %15s", instructionBuffer);
+#endif
     // set operator Register
     char* token = strtok(instructionBuffer, " ");
     setOperatorReg(&sr.operatorReg, token);
@@ -39,7 +43,9 @@ void decodeInstruction() {
 
         sr.sourceReg = getRegisterFromInteger(value);
     }
-
+#ifdef TOTAL_LOG
+    printf(": sourceReg = [%5d]", *sr.sourceReg);
+#endif
     token = strtok(NULL, " ");
     temp = strncmp(token, "0x", 2);
     if (0 == temp) {
@@ -55,7 +61,9 @@ void decodeInstruction() {
 
         sr.targetReg = (uint32_t*)getRegisterFromInteger(value);
     }
-
+#ifdef TOTAL_LOG
+    printf(": targetReg = [%5d]", *sr.targetReg);
+#endif
     free(instructionBuffer);
     instructionBuffer = NULL;
 }
@@ -84,8 +92,9 @@ void executeInstruction() {
         *sr.sourceReg = *sr.targetReg;
     }
     else if (strcmp(sr.operatorReg, op.branch) == 0) {
-        //this code block seem weird
-        printf("TRIGGER :: LOG :: Branch Triggered : Operation B\n");
+#ifdef LOG
+        printf("***TRIGGER*** :: LOG :: Branch Triggered : Operation B\n");
+#endif
         sr.resultImmediateReg = *sr.sourceReg;
     }
     else if (strcmp(sr.operatorReg, op.compare) == 0) {
@@ -98,7 +107,6 @@ void executeInstruction() {
     }
     else if (strcmp(sr.operatorReg, op.gcd)==0)
     {
-        // TODO: Implement GCD Operation by virtualizing the Computer API
         if(*sr.sourceReg <= 0 || *sr.targetReg <= 0)
         {
             sr.trapFlag = 1;
@@ -117,17 +125,20 @@ void executeInstruction() {
             *tempTarget = *tempSource % *tempTarget;
             *tempSource = temp;
         }
+#ifdef LOG
         printf("LOG :: gcd result : %d", *tempSource);
+#endif
         sr.resultImmediateReg = *tempSource;
         free(tempSource);
         free(tempTarget);
         tempSource = NULL;
         tempSource = NULL;
-        return;
     }
     else if (strcmp(sr.operatorReg, op.beq)==0)
     {
+#ifdef LOG
         printf("TRIGGER :: LOG :: Branch Triggered : Operation BEQ\n");
+#endif
         if(gr.r0 == *sr.sourceReg)
         {
             sr.programCounter = *sr.targetReg;
@@ -139,8 +150,10 @@ void executeInstruction() {
     else {
         sr.haltFlag = 1;
         sr.trapFlag = 1;
-        return;
     }
+#ifdef TOTAL_LOG
+    printf(": resultImm = [%5d]", sr.resultImmediateReg);
+#endif
 }
 
 void writeBackInstruction() {
@@ -150,9 +163,14 @@ void writeBackInstruction() {
     }
     else {
         //C, +-*/,
+#ifdef LOG
         printf("LOG:: REG 0: %d, RES : %d\n", gr.r0, sr.resultImmediateReg);
+#endif
         *sr.resultReg = sr.resultImmediateReg;
     }
+#ifdef TOTAL_LOG
+    printf(": REG 0 = [%5d]", gr.r0);
+#endif
 }
 
 void setResultTarget() {
