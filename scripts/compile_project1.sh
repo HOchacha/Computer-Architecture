@@ -22,4 +22,4 @@ else
 fi
 
 # Move the executable to the bin directory
-mv "cmake-build-debug/$binary_name" Project1/bin/
+mv "cmake-build-debug/$binary_name" Project1/
