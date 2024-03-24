@@ -43,6 +43,8 @@ typedef struct _operators
     char* move;
     char* branch;
     char* compare;
+    char* gcd;
+    char* beq;
     char* halt;
 }operators;
 

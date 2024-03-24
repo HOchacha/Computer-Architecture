@@ -4,11 +4,11 @@
 #include <stdlib.h>
 #include "register.h"
 #include "instruction_cycle.h"
-//#define LOG
+#define LOG
 
 speReg sr = { 0, };
 genReg gr = { 0, };
-const operators op = { "+", "-", "*", "/", "M", "B","C","H" };
+const operators op = { "+", "-", "*", "/", "M", "B","C","GCD", "BEQ", "H" };
 
 void printAllRegisterData();
 void printALLSpecificData();
