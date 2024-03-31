@@ -24,10 +24,20 @@ void decodeInstruction() {
 #endif
     // set operator Register
     char* token = strtok(instructionBuffer, " ");
+
+    //this triggers when the instruction malformed
+    if (token == NULL){
+        sr.trapFlag = 1;
+        return;
+    }
     setOperatorReg(&sr.operatorReg, token);
 
     // set source register
     token = strtok(NULL, " ");
+    if (token == NULL){
+        sr.trapFlag = 1;
+        return;
+    }
     int temp = strncmp(token, "0x", 2);
     if (0 == temp) {
         // convert the string value to unsigned integer value
@@ -43,11 +53,18 @@ void decodeInstruction() {
 
         sr.sourceReg = getRegisterFromInteger(value);
     }
+
 #ifdef TOTAL_LOG
     printf(": sourceReg = [%5d]", *sr.sourceReg);
 #endif
+
     token = strtok(NULL, " ");
+    if (token == NULL){
+        sr.trapFlag = 1;
+        return;
+    }
     temp = strncmp(token, "0x", 2);
+
     if (0 == temp) {
         char* tempString = removePrefix(token, "0x");
         uint32_t value = strtoul(tempString, NULL, 16);
