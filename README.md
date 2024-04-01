@@ -1,6 +1,6 @@
 # Computer Architecture
 - Project 1 : Simple Calculator with Instruction in C language
-- Project 2 : ?
+- Project 2 : MIPS Single Cycle Architecture (Implementing Instruction Processing Data Path)
 - Project 3 : ?
 - Project 4 : ?
 # How to run the program?
