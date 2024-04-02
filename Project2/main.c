@@ -28,6 +28,10 @@ int main(int arg, char* args[]){
         printf("Cannot Open the specified file\n");
 #endif
     }
+
+
+// TODO: Loading the program with elf header required
+
     unsigned char elf_header[0x40];
     fread(elf_header, 1, 0x40, file);
     printf("\n");
@@ -42,7 +46,6 @@ int main(int arg, char* args[]){
     uint16_t elf_version = elf_header[0x04];
     uint32_t elf_shoff = *((uint32_t*)(elf_header + 0x20));
 
-// TODO: Loading the program with elf header required
 
 // TODO: Make a Actual Driver Program for MIPS
 //       Make sure that components of mips architecture have to be seperated each components.
@@ -56,9 +59,11 @@ int main(int arg, char* args[]){
 //       -> if PC become 0xFFFF:FFFF, then machine complete execution
 //       SP(r29) have to be initialized with 0x1000:0000
 
+// Q: do we have to implement lock?
+
 /*
 
- Some of processing logic in program
+ Some of the processing logic in program
 
 */
 
