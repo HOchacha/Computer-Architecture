@@ -23,22 +23,23 @@ extern Register reg;
 
 
 // if I type Instruction kicks in, we can call this function with garbage-filled read_target parameter
-Reg_out get_value_from_input(uint32_t read_source, uint32_t read_target, uint32_t read_destination, uint32_t is_write, uint32_t write_data){
+Reg_out get_value_from_input(uint32_t read_source, uint32_t read_target, uint32_t read_destination){
 
     Reg_out temp = {0,};
 
     // this kind of operation is brutally critical for whole system.
     // if it is possible, you must check what the argument kicks in not to refer wrong memory
-    // Especially, read_target.
+    // Especially, read_target could be given a large value to exceed the limit of the memory.
     uint32_t* return_reg1 = get_register_from_integer(read_source);
     uint32_t* return_reg2 = get_register_from_integer(read_target);
     uint32_t* write_reg = get_register_from_integer(read_destination);
 
-    if (is_write == 1){
-        *write_reg = write_data;
-    }
 
     return temp;
+}
+
+void set_register_from_input(uint32_t write_data, uint32_t write_address, uint32_t is_write){
+
 }
 
 uint32_t* get_register_from_integer(uint32_t reg_integer){
