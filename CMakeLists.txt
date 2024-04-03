@@ -19,4 +19,7 @@ add_executable(Project2 Project2/main.c
         Project2/single_cycle/decode/decode_instruction.h
         Project2/component/memory/memory.h
         Project2/component/control_unit/control_unit.c
-        Project2/component/alu/alu.c)
+        Project2/component/alu/alu.c
+        Project2/component/miscelenous/path_variable.h
+        Project2/component/memory/memory.c
+        Project2/component/control_unit/control_unit.h)
