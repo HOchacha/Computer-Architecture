@@ -1,0 +1,12 @@
+//
+// Created by user on 2024-04-02.
+//
+#ifndef STDINT
+#define STDINT
+#include <stdint.h>
+#endif
+
+#ifndef COMPUTER_ARCHITECTURE_PATH_VARIABLE_H
+#define COMPUTER_ARCHITECTURE_PATH_VARIABLE_H
+
+#endif //COMPUTER_ARCHITECTURE_PATH_VARIABLE_H
