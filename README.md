@@ -24,5 +24,6 @@
     - cmake 3.26.x
 - To install cmake package in your Linux Env., execute shell script
 ```apt-get install cmake``` or run the script ```./install_cmake.sh```
+- if you still have problem for using Cmake & makefile, refer this link[https://modoocode.com/311]
 # Code Blame & Issue
 - I'm opened for being blame on my work. Feel free to open Issue and blame it. 
