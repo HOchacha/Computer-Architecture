@@ -3,7 +3,7 @@
 - Project 2 : MIPS Single Cycle Architecture (Implementing Instruction Processing Data Path)
 - Project 3 : ?
 - Project 4 : ?
-# How to run the program?
+# How to run this program?
 - To copy this repository, use command ```git clone https://github.com/HOchacha/Computer-Architecture```
 - After cloning this repo, you may find ```script/``` repository. There are scripts used for automatically installing some package and compiling my projects.
 - To execute the scripts, you need to give permission on the script.
