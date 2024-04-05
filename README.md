@@ -13,7 +13,7 @@
 - some scripts need some arguments, so just follow the instruction and specify it.
 - you might find the compiled output binary files in ```~/Computer-Architecture/bin``` directory.
 # Environment Setting
-- this repository is made with Cmake build Framework. So you may have to install cmake program in your linux environmet.
+- this repository is made with Cmake build Framework. So I just recommend installing cmake program in your linux environmet.
 - My Enviornment Setting
   - remote environment :
     - Linux Ubuntu 22.04 Container/Virtual Machine
