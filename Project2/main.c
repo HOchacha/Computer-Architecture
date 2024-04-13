@@ -30,7 +30,7 @@ int main(int arg, char* args[]){
     }
     uint32_t buff;
     while(fread(&buff, sizeof(uint32_t), 1, file) ==1){
-        printf("%x\n", buff);
+        printf("%08x\n", buff);
     }
     fclose(file);
 
