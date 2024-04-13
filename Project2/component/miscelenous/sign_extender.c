@@ -5,6 +5,6 @@
 #define STDINT
 #include <stdint.h>
 #endif
-void sign_extender(uint32_t input_data){
-
+uint32_t sign_extender(uint16_t input_data){
+    return (input_data >> 15) ? (((uint32_t)input_data)| 0xFFFF0000) : (uint32_t)input_data;
 }

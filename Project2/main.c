@@ -28,24 +28,17 @@ int main(int arg, char* args[]){
         printf("Cannot Open the specified file\n");
 #endif
     }
-
-
-// TODO: Loading the program with elf header required
-
-    unsigned char elf_header[0x40];
-    fread(elf_header, 1, 0x40, file);
-    printf("\n");
-    if (elf_header[0] != 0x7f || elf_header[1] != 'E' || elf_header[2] != 'L' || elf_header[3] != 'F') {
-        printf("Error: %s is not an ELF file with incorrect start byte sequence\n", args[1]);
-        for (int i = 0; i < 4; i++) {
-            printf("%02x ", elf_header[i]);
-        }
-        printf("\n");
-        return 0;
+    uint32_t buff;
+    while(fread(&buff, sizeof(uint32_t), 1, file) ==1){
+        printf("%x\n", buff);
     }
-    uint16_t elf_version = elf_header[0x04];
-    uint32_t elf_shoff = *((uint32_t*)(elf_header + 0x20));
+    fclose(file);
 
+// TODO: the instruction file will be fed on this program.
+//       there is no any header
+
+// 파일을 읽어들일 때는 Byte Ordering에 따라서, 적절하게 값을 메모리에 로드할 수 있도록 한다.
+// 명령어를 받을 때는, PC를 4로 값을 나눠서 접근할 수 있도록 한다.
 
 // TODO: Make a Actual Driver Program for MIPS
 //       Make sure that components of mips architecture have to be seperated each components.

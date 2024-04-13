@@ -1,5 +1,17 @@
 # MIPS Single Cycle Processing
 
+- MIPS 프로그램의 구조
+0. Initializing(Configuration) 
+1. begin execution in a loop
+   1. check terminal condition -> ex) check eof
+   2. Single Cycles
+      1. fetch
+      2. decode
+      3. execute
+      4. memory access
+      5. writeback
+2. print out stats
+
 - Single Cycle은 다음과 같이 구성된다.
   - Fetch
   - Decode

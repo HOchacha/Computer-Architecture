@@ -20,5 +20,5 @@ typedef struct _alu_output{
 
 typedef struct _alu_control{
     uint32_t funct;
-}ALU_funct;
+}ALU_control;
 #endif //COMPUTER_ARCHITECTURE_ALU_H

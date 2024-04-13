@@ -23,7 +23,7 @@ typedef struct _control_unit_output{
     uint32_t mem_write;
     uint32_t ALU_src;
     uint32_t reg_write;
-};
+}CU_output;
 #endif //COMPUTER_ARCHITECTURE_CONTROL_UNIT_H
 
 

@@ -15,6 +15,7 @@ void fetchInstruction(char** instructionTable) {
     sr.instructionReg = instructionTable[sr.programCounter++];
 }
 
+// Critic: no handler for malformed instruction
 void decodeInstruction() {
     char* instructionBuffer = calloc(strlen(sr.instructionReg), 40);
     // copy the instruction from register

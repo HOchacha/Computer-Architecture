@@ -11,6 +11,10 @@
 typedef struct _register{
     uint32_t reg[32];
 }Register;
+
+typedef struct _register_input{
+    uint32_t read_source;
+};
 typedef struct _register_output{
     uint32_t reg1;
     uint32_t reg2;
