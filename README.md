@@ -29,4 +29,4 @@
   - [https://medium.com/@onur.dundar1/cmake-tutorial-585dd180109b]
 # Code Blame & Issue
 - I'm opened for being blame on my work. Feel free to open Issue and blame it. 
-- Please be aware of all the conditions. I cannot response of your question, kind of "How to run the program?", "What is the Cmake?", "What is the point about your program?". PLEASE READ ALL MY DOCUMENTS AND SCRIPTS
+- Please be aware of all the conditions. I cannot always response of your question, kind of "How to run the program?", "What is the Cmake?", "What is the point about your program?". PLEASE READ ALL MY DOCUMENTS AND SCRIPTS
