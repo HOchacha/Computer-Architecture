@@ -1,2 +1,4 @@
 # .gitignore file
 cmake-build-debug
+Project2/main.c
+.exe

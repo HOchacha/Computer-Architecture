@@ -11,7 +11,8 @@
 #define COMPUTER_ARCHITECTURE_CONTROL_UNIT_H
 typedef struct _control_unit_input{
     uint32_t opcode;
-}CU_input;
+    uint32_t funct;
+}CU_opcode;
 
 typedef struct _control_unit_output{
     uint32_t reg_dst;
@@ -24,6 +25,9 @@ typedef struct _control_unit_output{
     uint32_t ALU_src;
     uint32_t reg_write;
 }CU_output;
+
+CU_output set_control_signal(CU_opcode opcode);
+
 #endif //COMPUTER_ARCHITECTURE_CONTROL_UNIT_H
 
 

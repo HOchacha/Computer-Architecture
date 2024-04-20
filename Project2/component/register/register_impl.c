@@ -21,9 +21,9 @@ extern Register reg;
 //        3. Control Signal은 전역 변수로 관리한다.
 //        4. 어떠한 일이 있어도, 일단은 변수가 32비트를 사용하지 않더라도 uint32_t로 구현한다.
 
-
+/*
 // if I type Instruction kicks in, we can call this function with garbage-filled read_target parameter
-Reg_out get_value_from_input(uint32_t read_source, uint32_t read_target, uint32_t read_destination){
+Reg_out get_value_from_input(Reg_in reg_in){
 
     Reg_out temp = {0,};
 
@@ -37,11 +37,25 @@ Reg_out get_value_from_input(uint32_t read_source, uint32_t read_target, uint32_
 
     return temp;
 }
+*/
 
+//해당 함수는 실제 회로가 정보를 전달하는 방식으로 동작한다.
+// 내부에 Control Logic 처리 로직을 포함한다.
+void set_register_with_write_data(uint32_t data_path, uint32_t regWrite){
+
+}
+
+//해당 함수는 실제 회로를 모방한 것이 아닌, 단순히 함수, 즉 행동에 초점을 맞춰서 매개 변수를 전달한다.
+void set_register_with_write_data_as_behavior(){
+
+}
 void set_register_from_input(uint32_t write_data, uint32_t write_address, uint32_t is_write){
 
 }
 
-uint32_t* get_register_from_integer(uint32_t reg_integer){
-    return &reg.reg[reg_integer];
+Reg_out get_value_from_decoded_values(Decoded_values decoded_values, CU_output control_signal){
+    Reg_out reg_out = {0,};
+    reg_out.reg1 = reg.reg[decoded_values.rs];
+    reg_out.reg2 = reg.reg[decoded_values.rt];
+    return reg_out;
 }

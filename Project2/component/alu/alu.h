@@ -4,21 +4,50 @@
 #ifndef STDINT
 #define STDINT
 #include <stdint.h>
+#include "../control_unit/control_unit.h"
+
 #endif
 
 #ifndef COMPUTER_ARCHITECTURE_ALU_H
 #define COMPUTER_ARCHITECTURE_ALU_H
 typedef struct _alu_input{
-
+    uint32_t operand1;
+    uint32_t operand2;
+    uint32_t ALUops;
 }Alu_input;
-// TODO: 유교수님께, 상태 레지스터에 대한 정보를 따로 저장하지 않는지 질문
-//       누적기 또한 사용하지 않는지 질문
-//       ALU에서 bcondition이 따로출력이 있는 것 같은데, 해당 부분은 어떻게 구현해야 하는가?
-typedef struct _alu_output{
 
+typedef struct _alu_output{
+    uint32_t ALUresult;
+    uint32_t isZero;
 }Alu_output;
 
 typedef struct _alu_control{
     uint32_t funct;
-}ALU_control;
+}Alu_control;
+
+
+Alu_output do_arithmetic_operation(Alu_input alu_input, Alu_control alu_ops);
+enum opcode{R = 0x0,
+    ADDI = 0x8, ADDIU = 0x9,
+    ANDI = 0xC,
+    BEQ = 0x4, BNE = 0x5,
+    J = 0x2, JAL = 0x3,
+    // LBU = 0x24, LHU = 0x25,
+    // LL = 0x30, LUI = 0xF
+    LW = 0x23, ORI = 0xd,
+    SLTI = 0xA, SLTIU = 0xb,
+    // SB = 0x28, SC = 0x38, SH = 0x29,
+    SW = 0x2b
+};
+
+enum funct{ADD = 0x20, ADDU = 0x21,
+    AND = 0x24, //JR   = 0x08, (NO takes ALU)
+    NOR = 0x27, OR   = 0x25,
+    SLT = 0x2A, SLTU = 0x2B,
+    SLL = 0x00, SRL  = 0x02,
+    SUB = 0x22, SUBU = 0x23
+
+};
 #endif //COMPUTER_ARCHITECTURE_ALU_H
+
+Alu_control get_ALU_operation(uint32_t funct, CU_output control);
