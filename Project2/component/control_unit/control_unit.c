@@ -38,5 +38,16 @@ CU_output set_control_signal(CU_input opcode){
     if(0x08 == opcode.funct && R == opcode.opcode){
         out.isJR = 1;
     }
+    if(J == opcode.opcode || JAL == opcode.opcode){
+        out.jump = 1;
+    }
+    // SLTI or SLT
+    if(SLTI == opcode.opcode  || (0x2a == opcode.funct && R == opcode.opcode)){
+        out.isSlt = 1;
+    }
+    // SLTIU or SLTU
+    if(SLTIU == opcode.opcode || (0x2b == opcode.funct && R == opcode.opcode)){
+        out.isSltu = 1;
+    }
     return out;
 }

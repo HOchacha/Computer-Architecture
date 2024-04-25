@@ -29,6 +29,8 @@ typedef struct _control_unit_output{
     uint32_t isBNE;
     uint32_t isItype;
     uint32_t isJR;
+    uint32_t isSlt;
+    uint32_t isSltu;
 }CU_output;
 
 CU_output set_control_signal(CU_input opcode);

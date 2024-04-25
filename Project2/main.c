@@ -1,8 +1,6 @@
 //
 // Created by user on 2024-04-02.
 //
-#pragma warning(disable:4996)
-//define all macros
 #define LOG
 
 #ifndef STANDARD_HEADER
@@ -34,11 +32,13 @@
 //init global variable
 Register general_reg;
 
-//memory has 0x80000000 byte. make sure a pointer for giving 32 bits into memory
+//memory has 0x8000000 byte. make sure a pointer for giving 32 bits into memory
 //just recommend to use memory manipulating function
 Memory memory;
 
+
 uint32_t PC;
+
 void print_registers();
 
 int main(int arg, char* args[]) {
@@ -58,9 +58,9 @@ int main(int arg, char* args[]) {
     }
 
     uint32_t buff;
-    PC = 0x00400000;
+    PC = 0x00000000;
     // currently global variable just work as local varible
-    uint32_t PC_loading_temp = 0x00400000;
+    uint32_t PC_loading_temp = PC;
     while (fread(&buff, sizeof(uint32_t), 1, file) == 1) {
         uint32_t upp = (buff << 24) & 0xff000000;
         uint32_t upp2 = (buff << 8) & 0x00ff0000;
@@ -110,7 +110,6 @@ int main(int arg, char* args[]) {
         Reg_out operands = get_value_from_decoded_values(decoded, control);
 
 
-
         //PIPELINE ID LATCH ACCESS
         /* some of the code */
 
@@ -131,11 +130,11 @@ int main(int arg, char* args[]) {
         uint32_t branch_addr = PC + shift_left2_s_imm;
 
         uint32_t jump_temp = decoded.j_address << 2;
-        uint32_t jump_addr = (PC & 0x10000000) | jump_temp;
+        uint32_t jump_addr = (PC & 0x80000000) | jump_temp;
 
         uint32_t jump_register = operands.reg1;
 
-        uint32_t isBranch = alu_output.isBranch & control.branch;
+        uint32_t isBranch = alu_output.isBranch && (control.isBNE || control.isBEQ);
 
         //PIPELINE ID LATCH ACCESS
         /* some of the code */
@@ -160,7 +159,7 @@ int main(int arg, char* args[]) {
         uint32_t PC_temp = PC;
         PC_temp = isBranch ? branch_addr : PC_temp;
         PC_temp = control.jump ? jump_addr : PC_temp;
-        PC_temp = control.isJR ? operands.reg1 : PC_temp;
+        PC_temp = control.isJR ? jump_register : PC_temp;
         PC = PC_temp;
         print_registers();
     }
