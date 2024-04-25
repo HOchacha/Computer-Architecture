@@ -54,3 +54,4 @@ typedef struct _register_control{
 Reg_out get_value_from_input(Reg_in input, uint32_t is_write, uint32_t write_data);
 Reg_out get_value_from_decoded_values(Decoded_values decoded_values, CU_output control_signal);
 void set_register_with_write_data(uint32_t data_path, uint32_t regWrite);
+void set_register_from_input(uint32_t write_data, uint32_t write_address, uint32_t is_write);

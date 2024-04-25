@@ -9,6 +9,7 @@ add_executable(Project1 Project1/main.c
         Project2/util/utils.h
         Project2/component/miscelenous/multiplexer_impl.c
         Project2_ver2/main.c
+        Project2/component/miscelenous/opcodes.h
 )
 
 add_executable(Project2 Project2/main.c

@@ -9,6 +9,6 @@
 #define COMPUTER_ARCHITECTURE_FETCH_INSTRUCTION_H
 
 //PC의 경우, Architectural State이므로 전역 변수로 접근하도록 한다.
-uint32_t fetch_instruction();
+uint32_t fetch_instruction(uint32_t PC);
 #endif //COMPUTER_ARCHITECTURE_FETCH_INSTRUCTION_H
 

@@ -18,15 +18,16 @@ typedef struct _alu_input{
 
 typedef struct _alu_output{
     uint32_t ALUresult;
-    uint32_t isZero;
+    uint32_t isBranch;
 }Alu_output;
 
 typedef struct _alu_control{
     uint32_t funct;
+    uint32_t isShift;
 }Alu_control;
 
 
-Alu_output do_arithmetic_operation(Alu_input alu_input, Alu_control alu_ops);
+Alu_output do_arithmetic_operation(Alu_input alu_input, Alu_control alu_control);
 enum opcode{R = 0x0,
     ADDI = 0x8, ADDIU = 0x9,
     ANDI = 0xC,

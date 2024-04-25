@@ -2,7 +2,8 @@
 // Created by user on 2024-04-02.
 //
 #include "register.h"
-extern Register reg;
+#define LOG
+extern Register general_reg;
 
 
 // TODO: 음, 함수를 적절히 분리시키지 못하면, 나중에 파이프라이닝에서 골치 아파질 가능성이 존재한다.
@@ -49,13 +50,25 @@ void set_register_with_write_data(uint32_t data_path, uint32_t regWrite){
 void set_register_with_write_data_as_behavior(){
 
 }
-void set_register_from_input(uint32_t write_data, uint32_t write_address, uint32_t is_write){
 
+// TODO: write_address에서 값이 0일 때, 입력된 값을 무시하도록 한다.
+void set_register_from_input(uint32_t write_data, uint32_t write_address, uint32_t is_write){
+    if(write_address == 0 || is_write == 0){
+        return;
+    }
+#ifdef LOG
+    printf("REG WRITE BACK : REG[%d] = %08x\n", write_address, write_data);
+#endif
+    general_reg.reg[write_address] = write_data;
 }
 
 Reg_out get_value_from_decoded_values(Decoded_values decoded_values, CU_output control_signal){
     Reg_out reg_out = {0,};
-    reg_out.reg1 = reg.reg[decoded_values.rs];
-    reg_out.reg2 = reg.reg[decoded_values.rt];
+    reg_out.reg1 = general_reg.reg[decoded_values.rs];
+    reg_out.reg2 = general_reg.reg[decoded_values.rt];
+
+
+    printf("return 1 : [%08x], return 2 : [%08x]\n", reg_out.reg1, reg_out.reg2);
+
     return reg_out;
 }

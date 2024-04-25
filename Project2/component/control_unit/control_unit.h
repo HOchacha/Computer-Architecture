@@ -12,7 +12,7 @@
 typedef struct _control_unit_input{
     uint32_t opcode;
     uint32_t funct;
-}CU_opcode;
+}CU_input;
 
 typedef struct _control_unit_output{
     uint32_t reg_dst;
@@ -24,9 +24,14 @@ typedef struct _control_unit_output{
     uint32_t mem_write;
     uint32_t ALU_src;
     uint32_t reg_write;
+    uint32_t isShift;
+    uint32_t isBEQ;
+    uint32_t isBNE;
+    uint32_t isItype;
+    uint32_t isJR;
 }CU_output;
 
-CU_output set_control_signal(CU_opcode opcode);
+CU_output set_control_signal(CU_input opcode);
 
 #endif //COMPUTER_ARCHITECTURE_CONTROL_UNIT_H
 

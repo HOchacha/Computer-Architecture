@@ -9,11 +9,15 @@
 #define STDINT
 #include <stdint.h>
 #endif
-
-extern Register reg;
+#ifndef MEMORY_H
+#define MEMORY_H
+#include "../../component/memory/memory.h"
+#endif
+extern Register general_reg;
 extern uint32_t PC;
-extern uint32_t mem[];
+extern Memory memory;
 // TODO: Fetch Instruction에서는 명령어를 반환하도록 한다.
-uint32_t fetch_instruction(){
-    return get_instruction_from_address();
+uint32_t fetch_instruction(uint32_t PC){
+    printf("%08x\n", PC); 
+    return get_instruction_from_address(PC);
 }

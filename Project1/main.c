@@ -4,8 +4,8 @@
 #include <stdlib.h>
 #include "register.h"
 #include "instruction_cycle.h"
-//#define LOG
-//#define PRINT_ALL_REGISTER
+#define LOG
+#define PRINT_ALL_REGISTER
 #define TOTAL_LOG
 
 speReg sr = { 0, };

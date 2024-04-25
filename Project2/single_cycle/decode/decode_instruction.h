@@ -25,5 +25,5 @@ typedef struct _decoded{
 
 Decoded_values decode_instruction(uint32_t);
 #endif //COMPUTER_ARCHITECTURE_DECODE_INSTRUCTION_H
-
+void print_instruction_info(Decoded_values v);
 uint32_t sign_extend_16_to_32(uint16_t input_data);
