@@ -16,8 +16,8 @@ Disassembly of section .text:
   20:	8fc3000c 	lw	v1,12(s8)      // v1 := sum
   24:	8fc20008 	lw	v0,8(s8)       // v0 := i
   28:	00000000 	nop
-  2c:	00621021 	addu    v0,v1,v0   // v0 := i + v1(sum)
-  30:	afc2000c 	sw	v0,12(s8)      // sum := v0
+  2c:	00621021 	addu    v0,v1,v0   // v0 := i + v1(sum)   /// 체크해야 할 지점
+  30:	afc2000c 	sw	v0,12(s8)      // sum := v0           /// 체크해야 할 지점
   34:	8fc20008 	lw	v0,8(s8)       // v0 := i
   38:	00000000 	nop
   3c:	24420001 	addiu	v0,v0,1    // v0 := v0 + 1

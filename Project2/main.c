@@ -166,7 +166,7 @@ int main(int arg, char* args[]) {
 
     // Some of the processing logic in program
 
-
+    printf("mem[0x00FFFFE4] = %08x\n", memory.mem[0x00FFFFE4]);
     // TODO: the end of the program, machine have to set v0 value
     //       the value of the register must be printed out
     //       i. Final return value (value in r2) – up to here, basic requirement
@@ -177,6 +177,8 @@ int main(int arg, char* args[]) {
     //       vi. Number of memory access instructions
     //       vii. Number of taken branches
 
+
+    
     return 0;
 }
 

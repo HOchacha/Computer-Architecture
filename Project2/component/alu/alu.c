@@ -74,7 +74,7 @@ Alu_output do_arithmetic_operation(Alu_input alu_input, Alu_control alu_ops){
             valueReturn.isBranch = valueReturn.ALUresult ? 1 : 0;
             printf("ALU OPS : SUB_NE_ALU");
             break;
-            /*
+
         case SLT_ALU:
             valueReturn.ALUresult = (int32_t)alu_input.operand1 < (int32_t)alu_input.operand2 ? 1 : 0;
             printf("ALU OPS : SLT_ALU");
@@ -83,7 +83,7 @@ Alu_output do_arithmetic_operation(Alu_input alu_input, Alu_control alu_ops){
             valueReturn.ALUresult = alu_input.operand1 < alu_input.operand2 ? 1 : 0;
             printf("ALU OPS : SLTU_ALU");
             break;
-             */
+
     }
     printf("\nALU ops result : %08x\n", valueReturn.ALUresult);
     return valueReturn;

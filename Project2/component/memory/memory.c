@@ -25,7 +25,7 @@ uint32_t get_instruction_from_address(uint32_t PC){
 // So, we don't need to seperate the operation of the component
 Memory_output set_input_memory_and_return_data(Memory_input inputs, Memory_control control_signals){
     Memory_output valueHolder = {0,};
-
+    printf("\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n");
     if (control_signals.mem_write == 1){
 #ifdef LOG
         printf("MEMORY WRITE : MEM[%08x] = %08x\n", inputs.address, inputs.write_data);
@@ -38,6 +38,7 @@ Memory_output set_input_memory_and_return_data(Memory_input inputs, Memory_contr
 #endif
         valueHolder.read_data = memory.mem[inputs.address];
     }
+    printf("\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n");
     return valueHolder;
 }
 
