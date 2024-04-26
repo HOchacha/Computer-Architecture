@@ -147,12 +147,13 @@ int main(int arg, char* args[]) {
         Memory_output mem_output = set_input_memory_and_return_data(mem_input, mem_control);
         //mux
         uint32_t data_path_to_register = (control.mem_to_reg) ? mem_output.read_data : alu_output.ALUresult;
-
+        data_path_to_register = (control.set_ra) ? PC+4 : data_path_to_register;
         // write back result
         // TODO: wrap it.
         // write_back();
 
         uint32_t write_register_address = control.isItype ? decoded.rt : decoded.rd;
+        write_register_address = control.set_ra ? 31 : write_register_address;
         set_register_from_input(data_path_to_register, write_register_address,control.reg_write);
 
         // updating_pc
@@ -161,7 +162,7 @@ int main(int arg, char* args[]) {
         PC_temp = control.jump ? jump_addr : PC_temp;
         PC_temp = control.isJR ? jump_register : PC_temp;
         PC = PC_temp;
-        //print_registers();
+        print_registers();
     }
 
     // Some of the processing logic in program

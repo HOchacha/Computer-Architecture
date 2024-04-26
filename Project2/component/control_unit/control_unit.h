@@ -31,6 +31,7 @@ typedef struct _control_unit_output{
     uint32_t isJR;
     uint32_t isSlt;
     uint32_t isSltu;
+    uint32_t set_ra;
 }CU_output;
 
 CU_output set_control_signal(CU_input opcode);

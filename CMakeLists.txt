@@ -28,7 +28,8 @@ add_executable(Project2 Project2/main.c
         Project2/component/alu/alu.c
         Project2/component/miscelenous/path_variable.h
         Project2/component/memory/memory.c
-        Project2/component/control_unit/control_unit.h)
+        Project2/component/control_unit/control_unit.h
+)
 
 add_executable(Project2_ver2
         Project2_ver2/main.c)
