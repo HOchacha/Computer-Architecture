@@ -161,12 +161,12 @@ int main(int arg, char* args[]) {
         PC_temp = control.jump ? jump_addr : PC_temp;
         PC_temp = control.isJR ? jump_register : PC_temp;
         PC = PC_temp;
-        print_registers();
+        //print_registers();
     }
 
     // Some of the processing logic in program
 
-    printf("mem[0x00FFFFE4] = %08x\n", memory.mem[0x00FFFFE4]);
+    printf("mem[0x00FFFFE4] = %08x\n", get_memory_value_from_input(0x00FFFFE4));
     // TODO: the end of the program, machine have to set v0 value
     //       the value of the register must be printed out
     //       i. Final return value (value in r2) – up to here, basic requirement
@@ -176,9 +176,8 @@ int main(int arg, char* args[]) {
     //       v. Number of J-type instruction
     //       vi. Number of memory access instructions
     //       vii. Number of taken branches
+    printf("reg[v0] : %08x\n", general_reg.reg[2]);
 
-
-    
     return 0;
 }
 

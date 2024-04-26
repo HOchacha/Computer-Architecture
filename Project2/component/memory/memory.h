@@ -26,4 +26,5 @@ typedef struct _memory_output{
 
 Memory_output set_input_memory_and_return_data(Memory_input inputs, Memory_control control_signals);
 uint32_t get_instruction_from_address(uint32_t PC);
+uint32_t get_memory_value_from_input(uint32_t address);
 #endif //COMPUTER_ARCHITECTURE_MEMORY_H
