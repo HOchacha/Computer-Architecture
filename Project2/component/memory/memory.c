@@ -34,7 +34,7 @@ Memory_output set_input_memory_and_return_data(Memory_input inputs, Memory_contr
     }
     if (control_signals.mem_read == 1){
 #ifdef LOG
-        printf("MEMORY READ : MEM[%08x] = %08x\n", inputs.address, memory.mem[inputs.address]);
+        printf("MEMORY READ : MEM[%08x] = %08x\n", inputs.address, *((uint32_t*)(memory.mem + inputs.address)));
 #endif
         valueHolder.read_data = *((uint32_t*)(memory.mem + inputs.address));
     }

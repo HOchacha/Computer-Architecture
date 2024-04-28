@@ -13,7 +13,7 @@ enum num{ADD_ALU, ADDU_ALU, SUB_ALU, SUBU_ALU,
         SRL_ALU, NOR_ALU,
         SUB_EQ, SUB_NE,
         SLT_ALU, SLTU_ALU
-        };
+};
 
 // TODO: ALU 내부로 처리가 들어가고 있지 않음, ALU 컨트롤 시그널을 다루는 부분을 수정해야 할 필요가 있음
 Alu_output do_arithmetic_operation(Alu_input alu_input, Alu_control alu_ops){

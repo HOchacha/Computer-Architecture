@@ -36,9 +36,14 @@ Register general_reg;
 //just recommend to use memory manipulating function
 Memory memory;
 
-
 uint32_t PC;
 
+uint32_t number_of_instructions = 0;
+uint32_t number_R_type = 0;
+uint32_t number_I_type = 0;
+uint32_t number_J_type = 0;
+uint32_t number_memory_access = 0;
+uint32_t number_branch = 0;
 void print_registers();
 
 int main(int arg, char* args[]) {
@@ -57,9 +62,11 @@ int main(int arg, char* args[]) {
 #endif
     }
 
+    // load program in memory
+    // start from 0x0
+
     uint32_t buff;
     PC = 0x00000000;
-    // currently global variable just work as local varible
     uint32_t PC_loading_temp = PC;
     while (fread(&buff, sizeof(uint32_t), 1, file) == 1) {
         uint32_t upp = (buff << 24) & 0xff000000;
@@ -71,60 +78,62 @@ int main(int arg, char* args[]) {
         printf("%08x\n", inst);
         PC_loading_temp+=4;
     }
-    printf("PC_LOADING_TEMP : %08x\n", PC_loading_temp);
-    // TODO: 메모리 구성 문제 해결
     fclose(file);
 
     // initializing register $ra register and $sp
     general_reg.reg[$ra] = 0xFFFFFFFF;
     general_reg.reg[$sp] = 0x01000000;
 
-// Start Single Cycle
-    // 탈출 조건 명시 $ra 값이 -1이 되면 종료, $31번에 탈출 주소가 명시되어 있음
+
+    // start single cycle machine
     while(0xFFFFFFFF != PC) {
-        // fetch instruction
+
+// fetch instruction
+
         // this instruction fetch an instruction and increases PC value by 4
         uint32_t instruction = fetch_instruction(PC);
+        PC += 4;
+
+// fetch instruction log
 #ifdef LOG
         printf("Instruction : %08x\n", instruction);
 #endif
-        // TODO: remove update PC and make sure it follows desired intention.
-        PC += 4;
 
         //PIPELINE IF LATCH ACCESS
-        /* some of the code */
+        /* leave a space for further implementation */
 
-        // decode instruction
-        // TODO : Wrap it all of the decoded step into single function
+// decode instruction
+
+        // get the decoded values from instruction (opcode, rs, rt, rd, shamt, funct, imm, s_imm, j_addr
         Decoded_values decoded = decode_instruction(instruction);
 
+        // get control signal from control unit
         CU_input cu_opcode = {decoded.opcode, decoded.funct};
         CU_output control;
         control = set_control_signal(cu_opcode);
 
-        // access register
-        // get_value_from_decoded_values gives the final values of the operands.
-        // this returns naive register values whatever opcode is.
-        // Also, there is included for determining what register value have to be return regardless of Instruction Type
-        // if you reconstruct the code structure, take a look of another function
+// access register
+
+        // this returns naive register values whatever opcode is
         Reg_out operands = get_value_from_decoded_values(decoded, control);
 
-
         //PIPELINE ID LATCH ACCESS
-        /* some of the code */
+        /* leave a space for further implementation */
 
-        // execute instruction & Branch Arithmetic Operation\
-    // TODO : Wrap it all of the execute and branch step into single function
+// execute instruction & Branch Arithmetic Operation
+
         Alu_control alu_control = get_ALU_operation(decoded.funct,control);
-        // Reg_out, s_imm
+
+        // determine which value proper for operand2
         Alu_input alu_inputs = {0,};
         alu_inputs.operand1 = operands.reg1;
         alu_inputs.operand2 = control.ALU_src ? decoded.s_immediate : operands.reg2;
         alu_inputs.operand2 = alu_control.isShift ? decoded.shamt : alu_inputs.operand2;
 
+        // execute operands
         Alu_output alu_output = do_arithmetic_operation(alu_inputs,alu_control);
 
-        // Branch and Jump Processing
+// Branch and Jump Processing
 
         uint32_t shift_left2_s_imm = decoded.s_immediate << 2;
         uint32_t branch_addr = PC + shift_left2_s_imm;
@@ -137,24 +146,26 @@ int main(int arg, char* args[]) {
         uint32_t isBranch = alu_output.isBranch && (control.isBNE || control.isBEQ);
 
         //PIPELINE ID LATCH ACCESS
-        /* some of the code */
+        /* leave a space for further implementation */
 
-        // access memory
-        // TODO: wrap it.
-        // access_memory();
+// access memory
+
         Memory_input mem_input = {alu_output.ALUresult, operands.reg2};
         Memory_control mem_control = {control.mem_read, control.mem_write};
         Memory_output mem_output = set_input_memory_and_return_data(mem_input, mem_control);
-        //mux
+
         uint32_t data_path_to_register = (control.mem_to_reg) ? mem_output.read_data : alu_output.ALUresult;
         data_path_to_register = (control.set_ra) ? PC+4 : data_path_to_register;
-        // write back result
-        // TODO: wrap it.
-        // write_back();
 
+// write back result
+
+        // setting access register address
         uint32_t write_register_address = control.isItype ? decoded.rt : decoded.rd;
         write_register_address = control.set_ra ? 31 : write_register_address;
-        set_register_from_input(data_path_to_register, write_register_address,control.reg_write);
+
+        // write back register
+        data_path_to_register = control.isUpperAccess ? (data_path_to_register << 16) : data_path_to_register;
+        set_register_from_input(data_path_to_register, write_register_address,control.reg_write, control.isUpperAccess);
 
         // updating_pc
         uint32_t PC_temp = PC;
@@ -165,19 +176,15 @@ int main(int arg, char* args[]) {
         print_registers();
     }
 
-    // Some of the processing logic in program
-
-    printf("mem[0x00FFFFE4] = %08x\n", get_memory_value_from_input(0x00FFFFE4));
-    // TODO: the end of the program, machine have to set v0 value
-    //       the value of the register must be printed out
-    //       i. Final return value (value in r2) – up to here, basic requirement
-    //       ii. Number of executed instructions
-    //       iii. Number of (executed) R-type instruction
-    //       iv. Number of I-type instruction
-    //       v. Number of J-type instruction
-    //       vi. Number of memory access instructions
-    //       vii. Number of taken branches
-    printf("reg[v0] : %08x\n", general_reg.reg[2]);
+    // prolog: print out all the information
+    printf("=============result=======repr in hex==========\n");
+    printf("%-40s: %6d\n","Final return Value register[v0]", general_reg.reg[2]);
+    printf("%-40s: %6d\n", "Number of executed instructions", number_of_instructions);
+    printf("%-40s: %6d\n", "Number of executed R-type", number_R_type);
+    printf("%-40s: %6d\n", "Number of executed I-type", number_I_type);
+    printf("%-40s: %6d\n", "Number of executed J-type", number_J_type);
+    printf("%-40s: %6d\n", "Number of memory access instruction", number_memory_access);
+    printf("%-40s: %6d\n", "Number of taken branches", number_branch);
 
     return 0;
 }

@@ -12,7 +12,8 @@ Disassembly of section .text:
   10:	2402000a 	li	v0,10
   14:	afc20018 	sw	v0,24(s8)
   18:	8fc40018 	lw	a0,24(s8)
-  1c:	0c000000 	jal	0 <main>
+  ():   24080040    addiu t0, zero, 0x40
+  1c:	0c000000 	JALR  t0                // 해당 구문 부터 +4 0x0c000010 => 0x0c000011
   20:	00000000 	nop
   24:	afc2001c 	sw	v0,28(s8)
   28:	03c0e821 	move	sp,s8
@@ -35,25 +36,27 @@ Disassembly of section .text:
   64:	10400004 	beqz	v0,78 <fib+0x38>
   68:	00000000 	nop
   6c:	24020001 	li	v0,1
-  70:	0800002e 	j	b8 <fib+0x78>
+  70:	0800002e 	j	b8 <fib+0x78>              //
   74:	00000000 	nop
   78:	8fc20030 	lw	v0,48(s8)
   7c:	00000000 	nop
   80:	2442ffff 	addiu	v0,v0,-1
   84:	00402021 	move	a0,v0
-  88:	0c000000 	jal	0 <main>
+  ():   24080040    addiu t0, zero, 0x40
+  88:	0c000000 	JALR	0 <main> => fib        // 0c000010 -> fib => 0c000011 -> fib + 4
   8c:	00000000 	nop
   90:	00408021 	move	s0,v0
   94:	8fc20030 	lw	v0,48(s8)
   98:	00000000 	nop
   9c:	2442fffe 	addiu	v0,v0,-2
   a0:	00402021 	move	a0,v0
-  a4:	0c000000 	jal	0 <main>
+  ():   24080040    addiu t0, zero, 0x40
+  a4:	0c000000 	JALR	0 <main> => fib        // 0c000010 -> fib => 0c000011 -> fib + 4
   a8:	00000000 	nop
   ac:	02021021 	addu	v0,s0,v0
   b0:	afc20018 	sw	v0,24(s8)
   b4:	8fc20018 	lw	v0,24(s8)
-  b8:	03c0e821 	move	sp,s8
+  b8:	03c0e821 	move	sp,s8                  // 0x000000b8 ->
   bc:	8fbf002c 	lw	ra,44(sp)
   c0:	8fbe0028 	lw	s8,40(sp)
   c4:	8fb00024 	lw	s0,36(sp)
