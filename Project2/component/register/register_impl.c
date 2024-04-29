@@ -59,17 +59,18 @@ void set_register_from_input(uint32_t write_data, uint32_t write_address, uint32
 #ifdef LOG
     printf("REG WRITE BACK : REG[%d] = %08x\n", write_address, write_data);
 #endif
-
-    general_reg.reg[write_address] = write_data;
-
+    if(write_address < 32){
+        general_reg.reg[write_address] = write_data;
+    }
 }
 
-Reg_out get_value_from_decoded_values(Decoded_values decoded_values, CU_output control_signal){
+Reg_out get_value_from_decoded_values(Reg_in register_in){
     Reg_out reg_out = {0,};
-    reg_out.reg1 = general_reg.reg[decoded_values.rs];
-    reg_out.reg2 = general_reg.reg[decoded_values.rt];
-
-
+    if(register_in.read_source < 32 && register_in.read_target < 32){
+        reg_out.reg1 = general_reg.reg[register_in.read_source];
+        reg_out.reg2 = general_reg.reg[register_in.read_target];
+    }
+    
     //printf("return 1 : [%08x], return 2 : [%08x]\n", reg_out.reg1, reg_out.reg2);
 
     return reg_out;

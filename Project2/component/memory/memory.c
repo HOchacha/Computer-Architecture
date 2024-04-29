@@ -30,12 +30,18 @@ Memory_output set_input_memory_and_return_data(Memory_input inputs, Memory_contr
 #ifdef LOG
         printf("MEMORY WRITE : MEM[%08x] = %08x\n", inputs.address, inputs.write_data);
 #endif
+        if(inputs.address > 0x7FFFFFFF){
+            return valueHolder;
+        }
         *((uint32_t*)(memory.mem + inputs.address)) = inputs.write_data;
     }
     if (control_signals.mem_read == 1){
 #ifdef LOG
         printf("MEMORY READ : MEM[%08x] = %08x\n", inputs.address, *((uint32_t*)(memory.mem + inputs.address)));
 #endif
+        if(inputs.address > 0x7FFFFFFF){
+            return valueHolder;
+        }
         valueHolder.read_data = *((uint32_t*)(memory.mem + inputs.address));
     }
     //printf("\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n");

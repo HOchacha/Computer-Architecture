@@ -39,19 +39,14 @@ typedef struct _register{
 typedef struct _register_input{
     uint32_t read_source;
     uint32_t read_target;
-    uint32_t read_destination;
 }Reg_in;
+
 typedef struct _register_output{
     uint32_t reg1;
     uint32_t reg2;
 }Reg_out;
 
-typedef struct _register_control{
-    uint32_t RegWrite;
-}Reg_write;
 #endif //COMPUTER_ARCHITECTURE_REGISTER_H
 
-Reg_out get_value_from_input(Reg_in input, uint32_t is_write, uint32_t write_data);
-Reg_out get_value_from_decoded_values(Decoded_values decoded_values, CU_output control_signal);
-void set_register_with_write_data(uint32_t data_path, uint32_t regWrite);
+Reg_out get_value_from_decoded_values(Reg_in register_in);
 void set_register_from_input(uint32_t write_data, uint32_t write_address, uint32_t is_write, uint32_t is_upper_access);

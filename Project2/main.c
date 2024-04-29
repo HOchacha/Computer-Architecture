@@ -117,7 +117,8 @@ int main(int arg, char* args[]) {
 // access register
 
         // this returns naive register values whatever opcode is
-        Reg_out operands = get_value_from_decoded_values(decoded, control);
+        Reg_in register_in = {decoded.rs, decoded.rt};
+        Reg_out operands = get_value_from_decoded_values(register_in);
 
         //PIPELINE ID LATCH ACCESS
         /* leave a space for further implementation */
