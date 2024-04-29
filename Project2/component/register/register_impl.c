@@ -2,7 +2,7 @@
 // Created by user on 2024-04-02.
 //
 #include "register.h"
-#define LOG
+//#define LOG
 extern Register general_reg;
 
 
@@ -59,12 +59,9 @@ void set_register_from_input(uint32_t write_data, uint32_t write_address, uint32
 #ifdef LOG
     printf("REG WRITE BACK : REG[%d] = %08x\n", write_address, write_data);
 #endif
-    if(is_upper_access == 1) {
-        general_reg.reg[write_address] = write_data | general_reg.reg[write_address];
-    }
-    else{
-        general_reg.reg[write_address] = write_data;
-    }
+
+    general_reg.reg[write_address] = write_data;
+
 }
 
 Reg_out get_value_from_decoded_values(Decoded_values decoded_values, CU_output control_signal){
@@ -73,7 +70,7 @@ Reg_out get_value_from_decoded_values(Decoded_values decoded_values, CU_output c
     reg_out.reg2 = general_reg.reg[decoded_values.rt];
 
 
-    printf("return 1 : [%08x], return 2 : [%08x]\n", reg_out.reg1, reg_out.reg2);
+    //printf("return 1 : [%08x], return 2 : [%08x]\n", reg_out.reg1, reg_out.reg2);
 
     return reg_out;
 }

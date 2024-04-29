@@ -19,6 +19,6 @@ extern Memory memory;
 
 // TODO: Fetch Instruction에서는 명령어를 반환하도록 한다.
 uint32_t fetch_instruction(uint32_t PC){
-    printf("%08x\n", PC); 
+    //printf("%08x\n", PC);
     return get_instruction_from_address(PC);
 }

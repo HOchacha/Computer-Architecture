@@ -73,5 +73,8 @@ CU_output set_control_signal(CU_input opcode){
     if(SW == opcode.opcode || LW == opcode.opcode){
         number_memory_access++;
     }
+    if(ANDI == opcode.opcode || ORI == opcode.opcode){
+        out.isZeroExtend = 1;
+    }
     return out;
 }

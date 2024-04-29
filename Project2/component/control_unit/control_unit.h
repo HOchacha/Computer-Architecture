@@ -33,7 +33,7 @@ typedef struct _control_unit_output{
     uint32_t isSltu;
     uint32_t set_ra;
     uint32_t isUpperAccess;
-
+    uint32_t isZeroExtend;
 }CU_output;
 
 CU_output set_control_signal(CU_input opcode);

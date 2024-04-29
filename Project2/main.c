@@ -64,7 +64,7 @@ int main(int arg, char* args[]) {
 
     // load program in memory
     // start from 0x0
-
+    freopen("output.txt", "w",stdout);
     uint32_t buff;
     PC = 0x00000000;
     uint32_t PC_loading_temp = PC;
@@ -89,7 +89,9 @@ int main(int arg, char* args[]) {
     while(0xFFFFFFFF != PC) {
 
 // fetch instruction
-
+        if(PC == 0xd0){
+            printf("ASd");
+        }
         // this instruction fetch an instruction and increases PC value by 4
         uint32_t instruction = fetch_instruction(PC);
         PC += 4;
@@ -122,14 +124,14 @@ int main(int arg, char* args[]) {
 
 // execute instruction & Branch Arithmetic Operation
 
-        Alu_control alu_control = get_ALU_operation(decoded.funct,control);
+        Alu_control alu_control = get_ALU_operation(decoded.funct,control, decoded.opcode);
 
         // determine which value proper for operand2
         Alu_input alu_inputs = {0,};
-        alu_inputs.operand1 = operands.reg1;
+        alu_inputs.operand1 = alu_control.isShift ? operands.reg2 : operands.reg1;
         alu_inputs.operand2 = control.ALU_src ? decoded.s_immediate : operands.reg2;
         alu_inputs.operand2 = alu_control.isShift ? decoded.shamt : alu_inputs.operand2;
-
+        alu_inputs.operand2 = control.isZeroExtend ? decoded.imm : alu_inputs.operand2;
         // execute operands
         Alu_output alu_output = do_arithmetic_operation(alu_inputs,alu_control);
 
@@ -164,7 +166,6 @@ int main(int arg, char* args[]) {
         write_register_address = control.set_ra ? 31 : write_register_address;
 
         // write back register
-        data_path_to_register = control.isUpperAccess ? (data_path_to_register << 16) : data_path_to_register;
         set_register_from_input(data_path_to_register, write_register_address,control.reg_write, control.isUpperAccess);
 
         // updating_pc
@@ -173,7 +174,7 @@ int main(int arg, char* args[]) {
         PC_temp = control.jump ? jump_addr : PC_temp;
         PC_temp = control.isJR ? jump_register : PC_temp;
         PC = PC_temp;
-        print_registers();
+        //print_registers();
     }
 
     // prolog: print out all the information
@@ -185,7 +186,7 @@ int main(int arg, char* args[]) {
     printf("%-40s: %6d\n", "Number of executed J-type", number_J_type);
     printf("%-40s: %6d\n", "Number of memory access instruction", number_memory_access);
     printf("%-40s: %6d\n", "Number of taken branches", number_branch);
-
+    fclose(stdout);
     return 0;
 }
 
