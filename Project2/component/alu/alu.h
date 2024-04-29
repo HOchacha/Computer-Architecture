@@ -51,4 +51,4 @@ enum funct{ADD = 0x20, ADDU = 0x21,
 };
 #endif //COMPUTER_ARCHITECTURE_ALU_H
 
-Alu_control get_ALU_operation(uint32_t funct, CU_output control);
+Alu_control get_ALU_operation(uint32_t funct, CU_output control, uint32_t opcode);
