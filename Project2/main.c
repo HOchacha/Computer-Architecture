@@ -89,9 +89,7 @@ int main(int arg, char* args[]) {
     while(0xFFFFFFFF != PC) {
 
 // fetch instruction
-        if(PC == 0xd0){
-            printf("ASd");
-        }
+
         // this instruction fetch an instruction and increases PC value by 4
         uint32_t instruction = fetch_instruction(PC);
         PC += 4;
