@@ -2,7 +2,7 @@
 // Created by user on 2024-04-02.
 //
 
-//#define LOG_DECODE_INSTRUCTION_INFO
+#define LOG_DECODE_INSTRUCTION_INFO
 #include "decode_instruction.h"
 #ifndef PATH_VARIABLE
 #define PATH_VARIABLE

@@ -1,1171 +1,428 @@
-27bdffd0
-afbf002c
-afbe0028
-03a0f021
-24021298
-afc20018
-34029387
-afc2001c
-8fc40018
-8fc5001c
-0c000013
+24081234
+24091151
+01091020
+01091021
+2502ffcc
+2102ffcc
+01091022
+01091023
+01091024
+310200ff
+01091025
+350200ff
+01091027
+3c020001
+8fa20000
 00000000
-afc20020
-03c0e821
-8fbf002c
-8fbe0028
-27bd0030
+afa20000
+0109102a
+290200ff
+2d0200ff
+00081080
 03e00008
+00081082
 00000000
-27bdffe0
-afbf001c
-afbe0018
-03a0f021
-afc40020
-afc50024
-8fc30020
-8fc20024
-00000000
-14620004
-00000000
-8fc20020
-08000039
-00000000
-8fc30020
-8fc20024
-00000000
-0043102a
-1040000b
-00000000
-8fc30020
-8fc20024
-00000000
-00621023
-00402021
-8fc50024
-0c000013
-00000000
-08000039
-00000000
-8fc30024
-8fc20020
-00000000
-00621023
-00402021
-8fc50020
-0c000013
-00000000
-03c0e821
-8fbf001c
-8fbe0018
-27bd0020
-03e00008
-00000000
-00000000
-Instruction : 27bdffd0
-Instruction : afbf002c
-Instruction : afbe0028
-Instruction : 03a0f021
-Instruction : 24021298
-Instruction : afc20018
-Instruction : 34029387
-Instruction : afc2001c
-Instruction : 8fc40018
-Instruction : 8fc5001c
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 8fc30024
-Instruction : 8fc20020
-Instruction : 00000000
-ASdInstruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50020
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 8fc30024
-Instruction : 8fc20020
-Instruction : 00000000
-ASdInstruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50020
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 8fc30024
-Instruction : 8fc20020
-Instruction : 00000000
-ASdInstruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50020
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 8fc30024
-Instruction : 8fc20020
-Instruction : 00000000
-ASdInstruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50020
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 8fc30024
-Instruction : 8fc20020
-Instruction : 00000000
-ASdInstruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50020
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 8fc30024
-Instruction : 8fc20020
-Instruction : 00000000
-ASdInstruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50020
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 8fc30024
-Instruction : 8fc20020
-Instruction : 00000000
-ASdInstruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50020
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 8fc30024
-Instruction : 8fc20020
-Instruction : 00000000
-ASdInstruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50020
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 00000000
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50024
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 0043102a
-Instruction : 1040000b
-Instruction : 8fc30024
-Instruction : 8fc20020
-Instruction : 00000000
-ASdInstruction : 00621023
-Instruction : 00402021
-Instruction : 8fc50020
-Instruction : 0c000013
-Instruction : 27bdffe0
-Instruction : afbf001c
-Instruction : afbe0018
-Instruction : 03a0f021
-Instruction : afc40020
-Instruction : afc50024
-Instruction : 8fc30020
-Instruction : 8fc20024
-Instruction : 00000000
-Instruction : 14620004
-Instruction : 00000000
-Instruction : 8fc20020
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
+Instruction : 24081234
+opcode : [0x 9], RS : [0], RT : [8], RD : [2], SHAMT : [8], FUNCT : [0x34]
+imm : [0x1234], j_addr : [0x   81234]
+ALU OPS : ADDU_ALU
+ALU ops result : 00001234
+REG WRITE BACK : REG[8] = 00001234
+Register values:
+R0 = 00000000	R1 = 00000000	R2 = 00000000	R3 = 00000000	
+R4 = 00000000	R5 = 00000000	R6 = 00000000	R7 = 00000000	
+R8 = 00001234	R9 = 00000000	R10 = 00000000	R11 = 00000000	
+R12 = 00000000	R13 = 00000000	R14 = 00000000	R15 = 00000000	
+R16 = 00000000	R17 = 00000000	R18 = 00000000	R19 = 00000000	
+R20 = 00000000	R21 = 00000000	R22 = 00000000	R23 = 00000000	
+R24 = 00000000	R25 = 00000000	R26 = 00000000	R27 = 00000000	
+R28 = 00000000	R29 = 01000000	R30 = 00000000	R31 = FFFFFFFF	
+
+
+
+Instruction : 24091151
+opcode : [0x 9], RS : [0], RT : [9], RD : [2], SHAMT : [5], FUNCT : [0x11]
+imm : [0x1151], j_addr : [0x   91151]
+ALU OPS : ADDU_ALU
+ALU ops result : 00001151
+REG WRITE BACK : REG[9] = 00001151
+Register values:
+R0 = 00000000	R1 = 00000000	R2 = 00000000	R3 = 00000000	
+R4 = 00000000	R5 = 00000000	R6 = 00000000	R7 = 00000000	
+R8 = 00001234	R9 = 00001151	R10 = 00000000	R11 = 00000000	
+R12 = 00000000	R13 = 00000000	R14 = 00000000	R15 = 00000000	
+R16 = 00000000	R17 = 00000000	R18 = 00000000	R19 = 00000000	
+R20 = 00000000	R21 = 00000000	R22 = 00000000	R23 = 00000000	
+R24 = 00000000	R25 = 00000000	R26 = 00000000	R27 = 00000000	
+R28 = 00000000	R29 = 01000000	R30 = 00000000	R31 = FFFFFFFF	
+
+
+
+Instruction : 01091020
+opcode : [0x 0], RS : [8], RT : [9], RD : [2], SHAMT : [0], FUNCT : [0x20]
+imm : [0x1020], j_addr : [0x 1091020]
+ALU OPS : ADD_ALU
+ALU ops result : 00002385
+REG WRITE BACK : REG[2] = 00002385
+Register values:
+R0 = 00000000	R1 = 00000000	R2 = 00002385	R3 = 00000000	
+R4 = 00000000	R5 = 00000000	R6 = 00000000	R7 = 00000000	
+R8 = 00001234	R9 = 00001151	R10 = 00000000	R11 = 00000000	
+R12 = 00000000	R13 = 00000000	R14 = 00000000	R15 = 00000000	
+R16 = 00000000	R17 = 00000000	R18 = 00000000	R19 = 00000000	
+R20 = 00000000	R21 = 00000000	R22 = 00000000	R23 = 00000000	
+R24 = 00000000	R25 = 00000000	R26 = 00000000	R27 = 00000000	
+R28 = 00000000	R29 = 01000000	R30 = 00000000	R31 = FFFFFFFF	
+
+
+
+Instruction : 01091021
+opcode : [0x 0], RS : [8], RT : [9], RD : [2], SHAMT : [0], FUNCT : [0x21]
+imm : [0x1021], j_addr : [0x 1091021]
+ALU OPS : ADDU_ALU
+ALU ops result : 00002385
+REG WRITE BACK : REG[2] = 00002385
+Register values:
+R0 = 00000000	R1 = 00000000	R2 = 00002385	R3 = 00000000	
+R4 = 00000000	R5 = 00000000	R6 = 00000000	R7 = 00000000	
+R8 = 00001234	R9 = 00001151	R10 = 00000000	R11 = 00000000	
+R12 = 00000000	R13 = 00000000	R14 = 00000000	R15 = 00000000	
+R16 = 00000000	R17 = 00000000	R18 = 00000000	R19 = 00000000	
+R20 = 00000000	R21 = 00000000	R22 = 00000000	R23 = 00000000	
+R24 = 00000000	R25 = 00000000	R26 = 00000000	R27 = 00000000	
+R28 = 00000000	R29 = 01000000	R30 = 00000000	R31 = FFFFFFFF	
+
+
+
+Instruction : 2502ffcc
+opcode : [0x 9], RS : [8], RT : [2], RD : [31], SHAMT : [31], FUNCT : [0x C]
+imm : [0xffcc], j_addr : [0x 102FFCC]
+ALU OPS : ADDU_ALU
+ALU ops result : 00001200
+REG WRITE BACK : REG[2] = 00001200
+Register values:
+R0 = 00000000	R1 = 00000000	R2 = 00001200	R3 = 00000000	
+R4 = 00000000	R5 = 00000000	R6 = 00000000	R7 = 00000000	
+R8 = 00001234	R9 = 00001151	R10 = 00000000	R11 = 00000000	
+R12 = 00000000	R13 = 00000000	R14 = 00000000	R15 = 00000000	
+R16 = 00000000	R17 = 00000000	R18 = 00000000	R19 = 00000000	
+R20 = 00000000	R21 = 00000000	R22 = 00000000	R23 = 00000000	
+R24 = 00000000	R25 = 00000000	R26 = 00000000	R27 = 00000000	
+R28 = 00000000	R29 = 01000000	R30 = 00000000	R31 = FFFFFFFF	
+
+
+
+Instruction : 2102ffcc
+opcode : [0x 8], RS : [8], RT : [2], RD : [31], SHAMT : [31], FUNCT : [0x C]
+imm : [0xffcc], j_addr : [0x 102FFCC]
+ALU OPS : ADDU_ALU
+ALU ops result : 00001200
+REG WRITE BACK : REG[2] = 00001200
+Register values:
+R0 = 00000000	R1 = 00000000	R2 = 00001200	R3 = 00000000	
+R4 = 00000000	R5 = 00000000	R6 = 00000000	R7 = 00000000	
+R8 = 00001234	R9 = 00001151	R10 = 00000000	R11 = 00000000	
+R12 = 00000000	R13 = 00000000	R14 = 00000000	R15 = 00000000	
+R16 = 00000000	R17 = 00000000	R18 = 00000000	R19 = 00000000	
+R20 = 00000000	R21 = 00000000	R22 = 00000000	R23 = 00000000	
+R24 = 00000000	R25 = 00000000	R26 = 00000000	R27 = 00000000	
+R28 = 00000000	R29 = 01000000	R30 = 00000000	R31 = FFFFFFFF	
+
+
+
+Instruction : 01091022
+opcode : [0x 0], RS : [8], RT : [9], RD : [2], SHAMT : [0], FUNCT : [0x22]
+imm : [0x1022], j_addr : [0x 1091022]
+ALU OPS : SUB_ALU
+ALU ops result : 000000e3
+REG WRITE BACK : REG[2] = 000000e3
+Register values:
+R0 = 00000000	R1 = 00000000	R2 = 000000E3	R3 = 00000000	
+R4 = 00000000	R5 = 00000000	R6 = 00000000	R7 = 00000000	
+R8 = 00001234	R9 = 00001151	R10 = 00000000	R11 = 00000000	
+R12 = 00000000	R13 = 00000000	R14 = 00000000	R15 = 00000000	
+R16 = 00000000	R17 = 00000000	R18 = 00000000	R19 = 00000000	
+R20 = 00000000	R21 = 00000000	R22 = 00000000	R23 = 00000000	
+R24 = 00000000	R25 = 00000000	R26 = 00000000	R27 = 00000000	
+R28 = 00000000	R29 = 01000000	R30 = 00000000	R31 = FFFFFFFF	
+
+
+
+Instruction : 01091023
+opcode : [0x 0], RS : [8], RT : [9], RD : [2], SHAMT : [0], FUNCT : [0x23]
+imm : [0x1023], j_addr : [0x 1091023]
+ALU OPS : SUBU_ALU
+ALU ops result : 000000e3
+REG WRITE BACK : REG[2] = 000000e3
+Register values:
+R0 = 00000000	R1 = 00000000	R2 = 000000E3	R3 = 00000000	
+R4 = 00000000	R5 = 00000000	R6 = 00000000	R7 = 00000000	
+R8 = 00001234	R9 = 00001151	R10 = 00000000	R11 = 00000000	
+R12 = 00000000	R13 = 00000000	R14 = 00000000	R15 = 00000000	
+R16 = 00000000	R17 = 00000000	R18 = 00000000	R19 = 00000000	
+R20 = 00000000	R21 = 00000000	R22 = 00000000	R23 = 00000000	
+R24 = 00000000	R25 = 00000000	R26 = 00000000	R27 = 00000000	
+R28 = 00000000	R29 = 01000000	R30 = 00000000	R31 = FFFFFFFF	
+
+
+
+Instruction : 01091024
+opcode : [0x 0], RS : [8], RT : [9], RD : [2], SHAMT : [0], FUNCT : [0x24]
+imm : [0x1024], j_addr : [0x 1091024]
+ALU OPS : AND_ALU
+ALU ops result : 00001010
+REG WRITE BACK : REG[2] = 00001010
+Register values:
+R0 = 00000000	R1 = 00000000	R2 = 00001010	R3 = 00000000	
+R4 = 00000000	R5 = 00000000	R6 = 00000000	R7 = 00000000	
+R8 = 00001234	R9 = 00001151	R10 = 00000000	R11 = 00000000	
+R12 = 00000000	R13 = 00000000	R14 = 00000000	R15 = 00000000	
+R16 = 00000000	R17 = 00000000	R18 = 00000000	R19 = 00000000	
+R20 = 00000000	R21 = 00000000	R22 = 00000000	R23 = 00000000	
+R24 = 00000000	R25 = 00000000	R26 = 00000000	R27 = 00000000	
+R28 = 00000000	R29 = 01000000	R30 = 00000000	R31 = FFFFFFFF	
+
+
+
+Instruction : 310200ff
+opcode : [0x C], RS : [8], RT : [2], RD : [0], SHAMT : [3], FUNCT : [0x3F]
+imm : [0x  ff], j_addr : [0x 10200FF]
+ALU OPS : AND_ALU
+ALU ops result : 00000034
+REG WRITE BACK : REG[2] = 00000034
+Register values:
+R0 = 00000000	R1 = 00000000	R2 = 00000034	R3 = 00000000	
+R4 = 00000000	R5 = 00000000	R6 = 00000000	R7 = 00000000	
+R8 = 00001234	R9 = 00001151	R10 = 00000000	R11 = 00000000	
+R12 = 00000000	R13 = 00000000	R14 = 00000000	R15 = 00000000	
+R16 = 00000000	R17 = 00000000	R18 = 00000000	R19 = 00000000	
+R20 = 00000000	R21 = 00000000	R22 = 00000000	R23 = 00000000	
+R24 = 00000000	R25 = 00000000	R26 = 00000000	R27 = 00000000	
+R28 = 00000000	R29 = 01000000	R30 = 00000000	R31 = FFFFFFFF	
+
+
+
+Instruction : 01091025
+opcode : [0x 0], RS : [8], RT : [9], RD : [2], SHAMT : [0], FUNCT : [0x25]
+imm : [0x1025], j_addr : [0x 1091025]
+ALU OPS : OR_ALU
+ALU ops result : 00001375
+REG WRITE BACK : REG[2] = 00001375
+Register values:
+R0 = 00000000	R1 = 00000000	R2 = 00001375	R3 = 00000000	
+R4 = 00000000	R5 = 00000000	R6 = 00000000	R7 = 00000000	
+R8 = 00001234	R9 = 00001151	R10 = 00000000	R11 = 00000000	
+R12 = 00000000	R13 = 00000000	R14 = 00000000	R15 = 00000000	
+R16 = 00000000	R17 = 00000000	R18 = 00000000	R19 = 00000000	
+R20 = 00000000	R21 = 00000000	R22 = 00000000	R23 = 00000000	
+R24 = 00000000	R25 = 00000000	R26 = 00000000	R27 = 00000000	
+R28 = 00000000	R29 = 01000000	R30 = 00000000	R31 = FFFFFFFF	
+
+
+
+Instruction : 350200ff
+opcode : [0x D], RS : [8], RT : [2], RD : [0], SHAMT : [3], FUNCT : [0x3F]
+imm : [0x  ff], j_addr : [0x 10200FF]
+ALU OPS : OR_ALU
+ALU ops result : 000012ff
+REG WRITE BACK : REG[2] = 000012ff
+Register values:
+R0 = 00000000	R1 = 00000000	R2 = 000012FF	R3 = 00000000	
+R4 = 00000000	R5 = 00000000	R6 = 00000000	R7 = 00000000	
+R8 = 00001234	R9 = 00001151	R10 = 00000000	R11 = 00000000	
+R12 = 00000000	R13 = 00000000	R14 = 00000000	R15 = 00000000	
+R16 = 00000000	R17 = 00000000	R18 = 00000000	R19 = 00000000	
+R20 = 00000000	R21 = 00000000	R22 = 00000000	R23 = 00000000	
+R24 = 00000000	R25 = 00000000	R26 = 00000000	R27 = 00000000	
+R28 = 00000000	R29 = 01000000	R30 = 00000000	R31 = FFFFFFFF	
+
+
+
+Instruction : 01091027
+opcode : [0x 0], RS : [8], RT : [9], RD : [2], SHAMT : [0], FUNCT : [0x27]
+imm : [0x1027], j_addr : [0x 1091027]
+ALU OPS : NOR_ALU
+ALU ops result : ffffec8a
+REG WRITE BACK : REG[2] = ffffec8a
+Register values:
+R0 = 00000000	R1 = 00000000	R2 = FFFFEC8A	R3 = 00000000	
+R4 = 00000000	R5 = 00000000	R6 = 00000000	R7 = 00000000	
+R8 = 00001234	R9 = 00001151	R10 = 00000000	R11 = 00000000	
+R12 = 00000000	R13 = 00000000	R14 = 00000000	R15 = 00000000	
+R16 = 00000000	R17 = 00000000	R18 = 00000000	R19 = 00000000	
+R20 = 00000000	R21 = 00000000	R22 = 00000000	R23 = 00000000	
+R24 = 00000000	R25 = 00000000	R26 = 00000000	R27 = 00000000	
+R28 = 00000000	R29 = 01000000	R30 = 00000000	R31 = FFFFFFFF	
+
+
+
+Instruction : 3c020001
+opcode : [0x F], RS : [0], RT : [2], RD : [0], SHAMT : [0], FUNCT : [0x 1]
+imm : [0x   1], j_addr : [0x   20001]
+ALU OPS : LUI_ALU
+ALU ops result : 00010000
+REG WRITE BACK : REG[2] = 00010000
+Register values:
+R0 = 00000000	R1 = 00000000	R2 = 00010000	R3 = 00000000	
+R4 = 00000000	R5 = 00000000	R6 = 00000000	R7 = 00000000	
+R8 = 00001234	R9 = 00001151	R10 = 00000000	R11 = 00000000	
+R12 = 00000000	R13 = 00000000	R14 = 00000000	R15 = 00000000	
+R16 = 00000000	R17 = 00000000	R18 = 00000000	R19 = 00000000	
+R20 = 00000000	R21 = 00000000	R22 = 00000000	R23 = 00000000	
+R24 = 00000000	R25 = 00000000	R26 = 00000000	R27 = 00000000	
+R28 = 00000000	R29 = 01000000	R30 = 00000000	R31 = FFFFFFFF	
+
+
+
+Instruction : 8fa20000
+opcode : [0x23], RS : [29], RT : [2], RD : [0], SHAMT : [0], FUNCT : [0x 0]
+imm : [0x   0], j_addr : [0x 3A20000]
+ALU OPS : ADDU_ALU
+ALU ops result : 01000000
+MEMORY READ : MEM[01000000] = 00000000
+REG WRITE BACK : REG[2] = 00000000
+Register values:
+R0 = 00000000	R1 = 00000000	R2 = 00000000	R3 = 00000000	
+R4 = 00000000	R5 = 00000000	R6 = 00000000	R7 = 00000000	
+R8 = 00001234	R9 = 00001151	R10 = 00000000	R11 = 00000000	
+R12 = 00000000	R13 = 00000000	R14 = 00000000	R15 = 00000000	
+R16 = 00000000	R17 = 00000000	R18 = 00000000	R19 = 00000000	
+R20 = 00000000	R21 = 00000000	R22 = 00000000	R23 = 00000000	
+R24 = 00000000	R25 = 00000000	R26 = 00000000	R27 = 00000000	
+R28 = 00000000	R29 = 01000000	R30 = 00000000	R31 = FFFFFFFF	
+
+
+
+Instruction : 00000000
+opcode : [0x 0], RS : [0], RT : [0], RD : [0], SHAMT : [0], FUNCT : [0x 0]
+imm : [0x   0], j_addr : [0x       0]
+ALU OPS : SLL_ALU
+ALU ops result : 00000000
+Register values:
+R0 = 00000000	R1 = 00000000	R2 = 00000000	R3 = 00000000	
+R4 = 00000000	R5 = 00000000	R6 = 00000000	R7 = 00000000	
+R8 = 00001234	R9 = 00001151	R10 = 00000000	R11 = 00000000	
+R12 = 00000000	R13 = 00000000	R14 = 00000000	R15 = 00000000	
+R16 = 00000000	R17 = 00000000	R18 = 00000000	R19 = 00000000	
+R20 = 00000000	R21 = 00000000	R22 = 00000000	R23 = 00000000	
+R24 = 00000000	R25 = 00000000	R26 = 00000000	R27 = 00000000	
+R28 = 00000000	R29 = 01000000	R30 = 00000000	R31 = FFFFFFFF	
+
+
+
+Instruction : afa20000
+opcode : [0x2B], RS : [29], RT : [2], RD : [0], SHAMT : [0], FUNCT : [0x 0]
+imm : [0x   0], j_addr : [0x 3A20000]
+ALU OPS : ADDU_ALU
+ALU ops result : 01000000
+MEMORY WRITE : MEM[01000000] = 00000000
+Register values:
+R0 = 00000000	R1 = 00000000	R2 = 00000000	R3 = 00000000	
+R4 = 00000000	R5 = 00000000	R6 = 00000000	R7 = 00000000	
+R8 = 00001234	R9 = 00001151	R10 = 00000000	R11 = 00000000	
+R12 = 00000000	R13 = 00000000	R14 = 00000000	R15 = 00000000	
+R16 = 00000000	R17 = 00000000	R18 = 00000000	R19 = 00000000	
+R20 = 00000000	R21 = 00000000	R22 = 00000000	R23 = 00000000	
+R24 = 00000000	R25 = 00000000	R26 = 00000000	R27 = 00000000	
+R28 = 00000000	R29 = 01000000	R30 = 00000000	R31 = FFFFFFFF	
+
+
+
+Instruction : 0109102a
+opcode : [0x 0], RS : [8], RT : [9], RD : [2], SHAMT : [0], FUNCT : [0x2A]
+imm : [0x102a], j_addr : [0x 109102A]
+ALU OPS : SLT_ALU
+ALU ops result : 00000000
+REG WRITE BACK : REG[2] = 00000000
+Register values:
+R0 = 00000000	R1 = 00000000	R2 = 00000000	R3 = 00000000	
+R4 = 00000000	R5 = 00000000	R6 = 00000000	R7 = 00000000	
+R8 = 00001234	R9 = 00001151	R10 = 00000000	R11 = 00000000	
+R12 = 00000000	R13 = 00000000	R14 = 00000000	R15 = 00000000	
+R16 = 00000000	R17 = 00000000	R18 = 00000000	R19 = 00000000	
+R20 = 00000000	R21 = 00000000	R22 = 00000000	R23 = 00000000	
+R24 = 00000000	R25 = 00000000	R26 = 00000000	R27 = 00000000	
+R28 = 00000000	R29 = 01000000	R30 = 00000000	R31 = FFFFFFFF	
+
+
+
+Instruction : 290200ff
+opcode : [0x A], RS : [8], RT : [2], RD : [0], SHAMT : [3], FUNCT : [0x3F]
+imm : [0x  ff], j_addr : [0x 10200FF]
+ALU OPS : SLT_ALU
+ALU ops result : 00000000
+REG WRITE BACK : REG[2] = 00000000
+Register values:
+R0 = 00000000	R1 = 00000000	R2 = 00000000	R3 = 00000000	
+R4 = 00000000	R5 = 00000000	R6 = 00000000	R7 = 00000000	
+R8 = 00001234	R9 = 00001151	R10 = 00000000	R11 = 00000000	
+R12 = 00000000	R13 = 00000000	R14 = 00000000	R15 = 00000000	
+R16 = 00000000	R17 = 00000000	R18 = 00000000	R19 = 00000000	
+R20 = 00000000	R21 = 00000000	R22 = 00000000	R23 = 00000000	
+R24 = 00000000	R25 = 00000000	R26 = 00000000	R27 = 00000000	
+R28 = 00000000	R29 = 01000000	R30 = 00000000	R31 = FFFFFFFF	
+
+
+
+Instruction : 2d0200ff
+opcode : [0x B], RS : [8], RT : [2], RD : [0], SHAMT : [3], FUNCT : [0x3F]
+imm : [0x  ff], j_addr : [0x 10200FF]
+ALU OPS : SLTU_ALU
+ALU ops result : 00000000
+REG WRITE BACK : REG[2] = 00000000
+Register values:
+R0 = 00000000	R1 = 00000000	R2 = 00000000	R3 = 00000000	
+R4 = 00000000	R5 = 00000000	R6 = 00000000	R7 = 00000000	
+R8 = 00001234	R9 = 00001151	R10 = 00000000	R11 = 00000000	
+R12 = 00000000	R13 = 00000000	R14 = 00000000	R15 = 00000000	
+R16 = 00000000	R17 = 00000000	R18 = 00000000	R19 = 00000000	
+R20 = 00000000	R21 = 00000000	R22 = 00000000	R23 = 00000000	
+R24 = 00000000	R25 = 00000000	R26 = 00000000	R27 = 00000000	
+R28 = 00000000	R29 = 01000000	R30 = 00000000	R31 = FFFFFFFF	
+
+
+
+Instruction : 00081080
+opcode : [0x 0], RS : [0], RT : [8], RD : [2], SHAMT : [2], FUNCT : [0x 0]
+imm : [0x1080], j_addr : [0x   81080]
+ALU OPS : SLL_ALU
+ALU ops result : 000048d0
+REG WRITE BACK : REG[2] = 000048d0
+Register values:
+R0 = 00000000	R1 = 00000000	R2 = 000048D0	R3 = 00000000	
+R4 = 00000000	R5 = 00000000	R6 = 00000000	R7 = 00000000	
+R8 = 00001234	R9 = 00001151	R10 = 00000000	R11 = 00000000	
+R12 = 00000000	R13 = 00000000	R14 = 00000000	R15 = 00000000	
+R16 = 00000000	R17 = 00000000	R18 = 00000000	R19 = 00000000	
+R20 = 00000000	R21 = 00000000	R22 = 00000000	R23 = 00000000	
+R24 = 00000000	R25 = 00000000	R26 = 00000000	R27 = 00000000	
+R28 = 00000000	R29 = 01000000	R30 = 00000000	R31 = FFFFFFFF	
+
+
+
 Instruction : 03e00008
+opcode : [0x 0], RS : [31], RT : [0], RD : [0], SHAMT : [0], FUNCT : [0x 8]
+imm : [0x   8], j_addr : [0x 3E00008]
 No Proper Ops
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 08000039
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : 03c0e821
-Instruction : 8fbf001c
-Instruction : 8fbe0018
-Instruction : 27bd0020
-Instruction : 03e00008
-No Proper Ops
-Instruction : afc20020
-Instruction : 03c0e821
-Instruction : 8fbf002c
-Instruction : 8fbe0028
-Instruction : 27bd0030
-Instruction : 03e00008
-No Proper Ops
+ALU OPS : SLL_ALU
+ALU ops result : ffffffff
+Register values:
+R0 = 00000000	R1 = 00000000	R2 = 000048D0	R3 = 00000000	
+R4 = 00000000	R5 = 00000000	R6 = 00000000	R7 = 00000000	
+R8 = 00001234	R9 = 00001151	R10 = 00000000	R11 = 00000000	
+R12 = 00000000	R13 = 00000000	R14 = 00000000	R15 = 00000000	
+R16 = 00000000	R17 = 00000000	R18 = 00000000	R19 = 00000000	
+R20 = 00000000	R21 = 00000000	R22 = 00000000	R23 = 00000000	
+R24 = 00000000	R25 = 00000000	R26 = 00000000	R27 = 00000000	
+R28 = 00000000	R29 = 01000000	R30 = 00000000	R31 = FFFFFFFF	
+
+
+
 =============result=======repr in hex==========
-Final return Value register[v0]         :      1
-Number of executed instructions         :   1061
-Number of executed R-type               :    359
-Number of executed I-type               :    637
-Number of executed J-type               :     65
-Number of memory access instruction     :    486
-Number of taken branches                :     73
+Final return Value register[v0]         :  18640
+Number of executed instructions         :     22
+Number of executed R-type               :     11
+Number of executed I-type               :     11
+Number of executed J-type               :      0
+Number of memory access instruction     :      2
+Number of taken branches                :      0

@@ -2,7 +2,7 @@
 // Created by user on 2024-04-02.
 //
 #include "register.h"
-//#define LOG
+#define LOG
 extern Register general_reg;
 
 

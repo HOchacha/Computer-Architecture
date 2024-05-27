@@ -7,7 +7,7 @@
 #include <stdint.h>
 #endif
 #include "memory.h"
-//#define LOG
+#define LOG
 #include <stdio.h>
 
 extern Memory memory;

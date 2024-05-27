@@ -85,7 +85,15 @@ int main(int arg, char* args[]) {
     general_reg.reg[$sp] = 0x01000000;
 
 
-    // start single cycle machine
+// TODO: Stall Condition을 작성하기 전에, 반드시 PPT 27을 참고하도록 한다.
+//       Stall은 모든 단계를 정지하는 것이 아니라, Decode Stage 이전의 단계를 대기하는 것을 의미한다.
+//       단순히 Latch가 값을 반환하지 않고 0이 반환되도록 하는 것을 의미할 수 있다.
+//       명령어가 유효한지 아닌지, valid 옵션을 Latch에 구현하도록 한다. (Decode Latch인지?)
+//       파이프라인 버블은, 단순히 SW visible State를 업데이트 하지 않는 것으로 만족된다.
+// TODO: 적재 후 전방전달의 경우, Bubble이 끼어 있다고 딱히 걱정할 것은 없음
+//
+
+// start single cycle machine
     while(0xFFFFFFFF != PC) {
 
 // fetch instruction
@@ -173,7 +181,7 @@ int main(int arg, char* args[]) {
         PC_temp = control.jump ? jump_addr : PC_temp;
         PC_temp = control.isJR ? jump_register : PC_temp;
         PC = PC_temp;
-        //print_registers();
+        print_registers();
     }
 
     // prolog: print out all the information

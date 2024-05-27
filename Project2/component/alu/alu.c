@@ -3,8 +3,8 @@
 //
 #include <stdio.h>
 #include "alu.h"
-//#define ALU_LOG
-//#define LOG
+#define ALU_LOG
+#define LOG
 
 enum num{ADD_ALU = 0x20, ADDU_ALU = 0x21, SUB_ALU = 0x22, SUBU_ALU = 0x23,
         AND_ALU = 0x24, OR_ALU = 0x25,
@@ -154,10 +154,7 @@ Alu_control get_ALU_operation(uint32_t funct, CU_output control, uint32_t opcode
                 alu_control.funct = SLTU_ALU;
                 break;
             default:
-#ifndef ALU_OPS_LOG
-#define ALU_OPS_LOG
                 printf("No Proper Ops\n");
-#endif
         }
     }
     //takes I type instruction
