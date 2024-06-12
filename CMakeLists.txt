@@ -45,6 +45,10 @@ add_executable(Project3 Project3/main.c
         Project3/component/memory/memory.c
         Project3/component/control_unit/control_unit.h
         Project3/util/utils.c
-        Project3/component/Latch/latch.h
-        Project3/component/Latch/latch.c
+        Project3/component/latch/latch.h
+        Project3/component/latch/latch.c
+        Project3/single_cycle/memory_access/memory_access.h
+        Project3/single_cycle/memory_access/memory_access.c
+        Project3/component/forwarding_unit/forwarding_unit.c
+        Project3/component/forwarding_unit/forwarding_unit.h
 )

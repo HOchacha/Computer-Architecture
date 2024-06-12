@@ -99,6 +99,7 @@ int main(int arg, char* args[]) {
 // fetch instruction
 
         // this instruction fetch an instruction and increases PC value by 4
+        printf("PC : %08X\n", PC);
         uint32_t instruction = fetch_instruction(PC);
         PC += 4;
 
@@ -143,6 +144,7 @@ int main(int arg, char* args[]) {
         Alu_output alu_output = do_arithmetic_operation(alu_inputs,alu_control);
 
 // Branch and Jump Processing
+
 
         uint32_t shift_left2_s_imm = decoded.s_immediate << 2;
         uint32_t branch_addr = PC + shift_left2_s_imm;

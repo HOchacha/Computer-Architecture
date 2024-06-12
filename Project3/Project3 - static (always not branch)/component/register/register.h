@@ -1,7 +1,14 @@
 #pragma once
 
 #include <stdint.h>
+
+#include "../../single_cycle/decode/decode_instruction.h"
+
 #include "../control_unit/control_unit.h"
+
+
+#ifndef REGISTER
+#define REGISTER
 
 #define STACK_INIT_ADDR 0x7fffffff
 
@@ -31,6 +38,6 @@ typedef struct _register_output{
     uint32_t reg2;
 }Reg_out;
 
-
 Reg_out get_value_from_decoded_values(Reg_in register_in);
 void set_register_from_input(uint32_t write_data, uint32_t write_address, uint32_t is_write, uint32_t is_upper_access);
+#endif
