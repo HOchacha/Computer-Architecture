@@ -64,7 +64,7 @@ int main(int arg, char* args[]) {
 
     // load program in memory
     // start from 0x0
-    freopen("output.txt", "w",stdout);
+    //freopen("output.txt", "w",stdout);
     uint32_t buff;
     PC = 0x00000000;
     uint32_t PC_loading_temp = PC;
@@ -97,7 +97,9 @@ int main(int arg, char* args[]) {
     while(0xFFFFFFFF != PC) {
 
 // fetch instruction
-
+        if(PC == 0x2AB0){
+            printf("");
+        }
         // this instruction fetch an instruction and increases PC value by 4
         printf("PC : %08X\n", PC);
         uint32_t instruction = fetch_instruction(PC);

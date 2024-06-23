@@ -16,6 +16,7 @@
 #include "component/control_unit/control_unit.h"
 #include "component/alu/alu.h"
 #include "component/memory/memory.h"
+#include "component/cache/cache_memory.h"
 #endif
 
 #ifndef SINGLE_CYCLE
@@ -44,7 +45,16 @@ uint32_t number_I_type = 0;
 uint32_t number_J_type = 0;
 uint32_t number_memory_access = 0;
 uint32_t number_branch = 0;
+
+uint32_t number_cache_read_hit = 0;
+uint32_t number_cache_read_miss = 0;
+uint32_t number_cache_write_hit = 0;
+uint32_t number_cache_write_miss = 0;
+
+
 void print_registers();
+
+extern Cache_memory cache;
 
 int main(int arg, char* args[]) {
     setbuf(stdout, 0);
@@ -61,9 +71,11 @@ int main(int arg, char* args[]) {
         printf("Cannot Open the specified file\n");
 #endif
     }
-
+    FILE *original_stdout = stdout;
     // load program in memory
     // start from 0x0
+
+    FILE* mem_access = fopen("mem_access.txt", "w");
     freopen("output.txt", "w",stdout);
     uint32_t buff;
     PC = 0x00000000;
@@ -98,18 +110,21 @@ int main(int arg, char* args[]) {
 
 // fetch instruction
 
+        if(PC == 0x2AB0){
+            printf("---");
+        }
+        if(cache.cacheline[71].valid){
+            printf("accessed 71\n");
+        }
         // this instruction fetch an instruction and increases PC value by 4
         printf("PC : %08X\n", PC);
-        uint32_t instruction = fetch_instruction(PC);
+        uint32_t instruction = fetch_instruction_from_cache(PC);
         PC += 4;
 
 // fetch instruction log
 #ifdef LOG
-        printf("Instruction : %08x\n", instruction);
+        //printf("Instruction : %08x\n", instruction);
 #endif
-
-        //PIPELINE IF LATCH ACCESS
-        /* leave a space for further implementation */
 
 // decode instruction
 
@@ -126,9 +141,6 @@ int main(int arg, char* args[]) {
         // this returns naive register values whatever opcode is
         Reg_in register_in = {decoded.rs, decoded.rt};
         Reg_out operands = get_value_from_decoded_values(register_in);
-
-        //PIPELINE ID LATCH ACCESS
-        /* leave a space for further implementation */
 
 // execute instruction & Branch Arithmetic Operation
 
@@ -156,16 +168,12 @@ int main(int arg, char* args[]) {
 
         uint32_t isBranch = alu_output.isBranch && (control.isBNE || control.isBEQ);
 
-        //PIPELINE ID LATCH ACCESS
-        /* leave a space for further implementation */
-
 // access memory
 
-        Memory_input mem_input = {alu_output.ALUresult, operands.reg2};
-        Memory_control mem_control = {control.mem_read, control.mem_write};
-        Memory_output mem_output = set_input_memory_and_return_data(mem_input, mem_control);
+        uint32_t cache_return = do_cache_manipulation(operands.reg2, alu_output.ALUresult, control.mem_write, control.mem_read);
 
-        uint32_t data_path_to_register = (control.mem_to_reg) ? mem_output.read_data : alu_output.ALUresult;
+
+        uint32_t data_path_to_register = (control.mem_to_reg) ? cache_return : alu_output.ALUresult;
         data_path_to_register = (control.set_ra) ? PC+4 : data_path_to_register;
 
 // write back result
@@ -183,8 +191,12 @@ int main(int arg, char* args[]) {
         PC_temp = control.jump ? jump_addr : PC_temp;
         PC_temp = control.isJR ? jump_register : PC_temp;
         PC = PC_temp;
-        print_registers();
+        //print_registers();
+        printf("\n\n\n");
+
     }
+
+    // flush all cacheline to
 
     // prolog: print out all the information
     printf("=============result=======repr in hex==========\n");
@@ -195,6 +207,10 @@ int main(int arg, char* args[]) {
     printf("%-40s: %6d\n", "Number of executed J-type", number_J_type);
     printf("%-40s: %6d\n", "Number of memory access instruction", number_memory_access);
     printf("%-40s: %6d\n", "Number of taken branches", number_branch);
+    printf("%-40s: %6d\n", "Number of Cache Read Hit", number_cache_read_hit);
+    printf("%-40s: %6d\n", "Number of Cache Read Miss", number_cache_read_miss);
+    printf("%-40s: %6d\n", "Number of Cache Write Hit", number_cache_write_hit);
+    printf("%-40s: %6d\n", "Number of Cache Write Miss", number_cache_write_miss);
     fclose(stdout);
     return 0;
 }

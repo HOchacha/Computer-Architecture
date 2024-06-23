@@ -1,0 +1,12 @@
+=============result=======repr in hex==========
+Final return Value register[v0]         :   5050
+Number of executed instructions         :   1330
+Number of executed R-type               :    409
+Number of executed I-type               :    920
+Number of executed J-type               :      1
+Number of memory access instruction     :    613
+Number of taken branches                :    102
+Number of Cache Read Hit                :   1736
+Number of Cache Read Miss               :      1
+Number of Cache Write Hit               :    205
+Number of Cache Write Miss              :      1

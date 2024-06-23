@@ -9,6 +9,7 @@
 #ifndef COMPUTER_ARCHITECTURE_CACHE_MEMORY_H
 #define COMPUTER_ARCHITECTURE_CACHE_MEMORY_H
 
+#define DIRECT_MAPPED_CACHE
 
 #ifdef DIRECT_MAPPED_CACHE
 
@@ -21,18 +22,22 @@
  *  Cacheline Offset : 7 bit
  */
 
+#define CACHELINE_ENTRIES 128
+#define CACHELINE_SIZE 0x80
+
 typedef struct _cacheline{
     uint32_t tag;
     uint32_t policy;
     uint32_t valid;
     uint32_t dirty;
-    uint8_t cacheline[128];
+    uint8_t cacheline[CACHELINE_ENTRIES];
 }Cacheline;
 
 typedef struct _cache {
-    Cacheline cacheline[0x80];
+    Cacheline cacheline[CACHELINE_SIZE];
 }Cache_memory;
 
+uint32_t do_cache_manipulation(uint32_t data, uint32_t address, uint32_t mem_write, uint32_t mem_read);
 #endif
 
 #ifdef FULLY_ASSOCIATED_CACHE
@@ -47,6 +52,8 @@ typedef struct _cache {
  *  NO INDEX
  */
 
+#define CACHELINE_ENTRIES 128
+
 typedef struct _cacheline{
     uint32_t tag;
     uint32_t policy;
@@ -60,59 +67,8 @@ typedef struct _cache {
     uint32_t available_tag_index;
 }Cache_memory;
 
-#endif
+uint32_t do_cache_manipulation(uint32_t data, uint32_t address, uint32_t mem_write, uint32_t mem_read);
 
-
-#ifdef SET_ASSOCIATIVE_CACHE_2WAY
-#define SET_ASSOCIATIVE_CACHE_2WAY
-
-/*
- *  Cache Store Size : 16KB
- *  Cache line Size  : 128B
- *  Cacheline Entries : 128
- *  Tag Size : 26bit
- *  Cacheline Offset : 7bit
- *  for 2way index : 6bit
- */
-
-typedef struct _cacheline{
-    uint32_t cacheline[128];
-}Cacheline;
-
-typedef struct _cache{
-    uint32_t tag;
-    uint32_t policy;
-    uint32_t valid;
-    uint32_t dirty;
-    Cacheline cacheline[0x40];
-};
-
-
-#endif
-
-#ifdef SET_ASSOCIATIVE_CACHE_4WAY
-#define SET_ASSOCIATIVE_CACHE_4WAY
-
-/*
- *  Cache Store Size : 16KB
- *  Cache line Size  : 128B
- *  Cacheline Entries : 128
- *  Tag Size : 26bit
- *  Cacheline Offset : 7bit
- *  for 2way index : 6bit
- */
-
-typedef struct _cacheline{
-    uint32_t cacheline[128];
-}Cacheline;
-
-typedef struct _cache{
-    uint32_t tag;
-    uint32_t policy;
-    uint32_t valid;
-    uint32_t dirty;
-    Cacheline cacheline[0x20];
-};
 #endif
 
 #endif //COMPUTER_ARCHITECTURE_CACHE_MEMORY_H

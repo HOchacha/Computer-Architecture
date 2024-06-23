@@ -28,7 +28,7 @@ add_executable(Project2 Project2/main.c
         Project2/component/control_unit/control_unit.h
 )
 
-add_executable(Project4 Project2/main.c
+add_executable(Project4 Project4/main.c
         Project4/component/register/register.h
         Project4/component/register/register_impl.c
         Project4/single_cycle/execute/execute_instruction.c
@@ -48,4 +48,7 @@ add_executable(Project4 Project2/main.c
         Project4/component/cache/cache_memory.c
         Project4/component/cache/cache_memory.h
         Project4/component/cache/cache_memory.c
+        Project4/component/cache/history_buffer.c
+        Project4/component/cache/history_buffer.h
+        Project4/component/cache/history_buffer.c
 )
