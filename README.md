@@ -3,6 +3,8 @@
 - Project 2 : MIPS Single Cycle Architecture (Implementing Instruction Processing Data Path)
 - Project 3 : Multi-cycle Pipelined Architecture
 - Project 4 : Cache memory
+# Additional Diagram for All Projects
+- [Miro_Computer-Architecture-link](https://miro.com/app/board/uXjVKfXKiSU=/?share_link_id=945565107580)
 # How to run this program?
 - To copy this repository, use command ```git clone https://github.com/HOchacha/Computer-Architecture```
 - After cloning this repo, you may find ```script/``` repository. There are scripts used for automatically installing some package and compiling my projects.
